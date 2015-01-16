@@ -1,4 +1,5 @@
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?v=1.7.2"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js?v=2.0.5"></script>
 <script>!function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
     if (!d.getElementById(id)) {
@@ -35,5 +36,24 @@
         g.src = '//hnbutton.appspot.com/static/hn.min.js';
         s.parentNode.insertBefore(g, s);
     }(document, 'script'));
+</script>
+<script>
+    jQuery(document).ready(function($) {
+        // PROFILE WAYPOINTS
+        $('#posttitle, .first').waypoint(function(direction) {
+            if(direction === "down") {
+                $('.profile').addClass("stuck");
+            }
+            if(direction === "up"){
+                $('.profile').removeClass("stuck");
+            }
+        });
+
+        $('.postprofile').waypoint(function(direction) {
+            if(direction === "down"){ if($('.profile').first().hasClass('nohide') == false) $('.profile').addClass("hide"); };
+            if(direction === "up"){ $('.profile').removeClass("hide"); };
+        }, { offset: '100%' });
+
+    });
 </script>
 {% include _google-analytics.html %}

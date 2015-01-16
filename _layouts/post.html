@@ -13,14 +13,14 @@ layout: base
         <header>
             <div class="meta">
                 By
-                <address>{{ page.author.name }}</address> &mdash;
+                <address>{{ site.title }}</address> &mdash;
                 <time pubdate datetime="{{ page.date | date: " %Y-%d-%B " }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | date: "%B %d, %Y" }}</time>
             </div>
-            <h1 class="title">{{ page.title }}</h1>
+            <h1 class="title" id="posttitle">{{ page.title }}</h1>
             {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
         </header>
 
-        <section>
+        <section class="postbody">
             {{ content }}
             {% include _social.html %}
         </section>
@@ -28,9 +28,9 @@ layout: base
         <footer>
             <address class="postprofile">
                 <img src="https://avatars.githubusercontent.com/{{ site.github_username }}">
-                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}"
-                                         title="{{ page.author_name }}" target="_blank">{{ page.author.name}}</a></strong><br>
-                    <span class="muted">{{ page.author.bio }}</span>
+                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ site.title.twitter_username }}"
+                                         title="{{ site.title }}" target="_blank">{{ site.title }}</a></strong><br>
+                    <span class="muted">{{ site.subtitle }}</span>
                 </p>
                 <ul class="social">
                     <li><a href="http://twitter.com/{{ site.twitter_username }}" class="twitter" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -38,6 +38,21 @@ layout: base
                     <li><a href="/feed.xml" class="rss" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a></li>
                     <li><a href="http://www.linkedin.com/in/{{ linkedin_username }}" class="linkedin" title="Follow on Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 </ul>
+
+                <div class="profile">
+                    <div style="height: 80px;">
+                        <img src="https://avatars.githubusercontent.com/{{ site.github_username }}" class="profileimage" alt="{{ site.title }}">
+                        <h4>{{ site.title }} <span class="muted" style="font-size: 0.8em; font-weight: 500;">{{ site.subtitle }}</span></h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="http://twitter.com/{{ site.twitter_username }}" class="twitter" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://github.com/{{ site.github_username }}" class="github" title="Follow on GitHub" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="/feed.xml" class="rss" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="http://www.linkedin.com/in/{{ linkedin_username }}" class="linkedin" title="Follow on Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <p>{{ site.bio }}</p>
+                    <hr>
+                </div>
             </address>
         </footer>
 

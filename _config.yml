@@ -1,9 +1,10 @@
 # Site settings
 title:             "Martin Micunda"
 subtitle:          "Full Stack Software Engineer"
+bio:               "Martin Micunda is a Full Stack Software Engineer base in Dublin, Ireland."
 baseurl:           "" # the subpath of your site, e.g. /blog/
 url:               http://martinmicunda.com
-cover_image:       blog-cover.jpg
+cover_image:       blog-cover.jpg?15467
 logo:              logo.png
 company:           Martin Micunda
 github_username:   martinmicunda

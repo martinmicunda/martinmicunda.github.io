@@ -307,3 +307,37 @@ article {
     }
 
 }
+
+.profile {
+    position: fixed;
+    width: 15%;
+    right: 5%;
+    top: 130px;
+    z-index: 400;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    img {
+        box-shadow: 0 0 0 3px #b6c2c9;
+        float: left;
+        border-radius: 54px;
+        width: 70px;
+        margin: 0 20px 0 0;
+    }
+}
+.profile.stuck {
+    opacity: 0.5;
+}
+.profile.hide {
+    opacity: 0.0;
+}
+.profile:hover {
+    opacity: 1.0;
+}
+.profile hr {
+    margin: 10px 0 15px;
+    border-color: #ddd;
+}

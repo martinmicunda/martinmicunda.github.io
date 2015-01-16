@@ -1,0 +1,18 @@
+/* Bodytext font */
+$font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Font for headings and navigation*/
+$headings-font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Text colors */
+$text: #21272d;
+$textmuted: #848484;
+$accent: #00b1e1;
+
+
+/* IMPORT CSS FILES */
+@import "./components/base";
+@import "./components/nav";
+@import "./components/article";
+@import "./components/syntax";
+@import "./components/responsive";

@@ -1,23 +1,53 @@
 ---
-layout: default
+layout: base
 ---
+<div class="blog-cover" style="background-image:url(/images/{{ site.cover_image }});">
+    <section>
+        <div class="container">
+            <h1>{{ site.title }}</h1>
+            {% if site.subtitle %}<h3>{{ site.subtitle }}</h3>{% endif %}
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+            <a href="https://twitter.com/{{ site.twitter_username }}" title="Follow on Twitter" target="_blank">
+                <i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/{{ site.github_username }}" title="Follow on GitHub" target="_blank">
+                <i class="fa fa-github"></i></a>
+            <a href="/feed.xml" title="RSS Feed" target="_blank">
+                <i class="fa fa-rss"></i></a>
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="Follow on Linkedin" target="_blank">
+                <i class="fa fa-linkedin"></i></a>
+        </div>
+    </section>
 </div>
+
+<article class="container">
+    {% for post in paginator.posts %}
+    {% unless post.draft %}
+    <section class="index">
+        <div>
+            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
+
+            <p>{{ post.excerpt }}</p>
+
+            <div class="meta">
+                Written By
+                <address>{{ post.author.name }}</address> &mdash;
+                <time pubdate datetime="{{ post.date | date: " %Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </div>
+        </div>
+        <hr>
+    </section>
+    {% endunless %}
+    {% endfor %}
+    <section class="pagination" style="text-align:center">
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="/" class="btn btn-outline">‹ Newer</a>
+        {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
+        {% endif %}
+        {% endif %}
+        {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
+        {% endif %}
+    </section>
+</article>

@@ -1,10 +1,30 @@
 # Site settings
-title: Martin Micunda Blog
-description: Personal blog of Martin Micunda
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://martinmicunda.com" # the base hostname & protocol for your site
-twitter_username: martinmicunda
-github_username:  martinmicunda
+title:             "Martin Micunda"
+subtitle:          "Full Stack Software Engineer"
+baseurl:           "" # the subpath of your site, e.g. /blog/
+url:               http://martinmicunda.com
+cover_image:       blog-cover.jpg
+logo:              logo.png
+company:           Martin Micunda
+github_username:   martinmicunda
+twitter_username:  martinmicunda
+linkedin_username: martinmicunda
 
-# Build settings
-markdown: kramdown
+# Comments
+disqus:
+  # Eg. "exampleblog" Set to false to disable comments
+  shortname:  martinmicunda
+
+
+# Google Fonts
+# eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
+google_font: 'Droid+Sans:400,700'
+
+highlighter: pygments
+
+permalink:     pretty
+paginate_path: 'page:num'
+paginate:      10
+
+markdown:      kramdown
+

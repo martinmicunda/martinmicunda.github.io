@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="title" content="{% if page.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }} &mdash; {{ site.subtitle }}{% endif %}">
+
+    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }} &mdash; {{ site.subtitle }}{% endif %}</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/{{ site.logo }}"/>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta name="og:image" content="website">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.title }}{% endif %}"/>
+    <meta name="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.cover_image %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>
+    {% if page.main_image %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ page.main_image }}"/>
+    {% endif %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ site.logo }}"/>
+    {% endif %}
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt }}"/>
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ "/css/main.css" | prepend: site.baseurl }}" rel="stylesheet">
+</head>
+    <body>
+        <section class="site-nav">
+            <header>
+                <nav id="navigation">
+                    <a class="brand" href="/">
+                        <span class="logo">MM</span>
+                    </a>
+                    <a href="/" class="home">Blog</a>
+                    <a href="/talks">Talks</a>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/about">About</a>
+                    <!--http://glenmaddern.com/talks-->
+                </nav>
+            </header>
+        </section>
+
+        {{ content }}
+
+        <footer class="site-footer">
+            <div class="container">
+                &copy; {{ site.time | date: "%Y" }}
+
+                <nav>
+                    <a href="{{ site.url }}">{{ site.company }}</a> &middot;
+                    <a href="/">Blog</a> &middot;
+                    <a href="/talks">Talks</a> &middot;
+                    <a href="/portfolio">Portfolio</a> &middot;
+                    <a href="/about">About</a>
+                </nav>
+
+                <nav class="social">
+                    <a href="https://twitter.com/{{ site.twitter_username }}" title="Follow on Twitter" target="_blank">
+                        <i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/{{ site.github_username }}" title="Follow on GitHub" target="_blank">
+                        <i class="fa fa-github"></i></a>
+                    <a href="/feed.xml" title="RSS Feed" target="_blank">
+                        <i class="fa fa-rss"></i></a>
+                    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="Follow on Linkedin" target="_blank">
+                        <i class="fa fa-linkedin"></i></a>
+                </nav>
+            </div>
+        </footer>
+
+        {% include _scripts.html %}
+    </body>
+</html>

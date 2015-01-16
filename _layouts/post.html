@@ -1,15 +1,48 @@
 ---
-layout: default
+layout: base
 ---
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+{% if page.cover_image %}
+<div class="article-cover">
+    <div>
+        <img src="/images/{{ page.cover_image }}" class="image">
+    </div>
 </div>
+{% endif %}
+<article>
+    <div class="container">
+        <header>
+            <div class="meta">
+                By
+                <address>{{ page.author.name }}</address> &mdash;
+                <time pubdate datetime="{{ page.date | date: " %Y-%d-%B " }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            </div>
+            <h1 class="title">{{ page.title }}</h1>
+            {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
+        </header>
+
+        <section>
+            {{ content }}
+            {% include _social.html %}
+        </section>
+
+        <footer>
+            <address class="postprofile">
+                <img src="https://avatars.githubusercontent.com/{{ site.github_username }}">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}"
+                                         title="{{ page.author_name }}" target="_blank">{{ page.author.name}}</a></strong><br>
+                    <span class="muted">{{ page.author.bio }}</span>
+                </p>
+                <ul class="social">
+                    <li><a href="http://twitter.com/{{ site.twitter_username }}" class="twitter" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/{{ site.github_username }}" class="github" title="Follow on GitHub" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="/feed.xml" class="rss" title="RSS Feed" target="_blank"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="http://www.linkedin.com/in/{{ linkedin_username }}" class="linkedin" title="Follow on Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </address>
+        </footer>
+
+        <section>
+            {% include _disqus.html %}
+        </section>
+    </div>
+</article>

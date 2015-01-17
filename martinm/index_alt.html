@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en"/>
+    <meta name="author" content="Martin Micunda"/>
+    <title>MARtinm.net | Update required</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 9]>
+    <link href="css/style_ie9.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- browser detect -->
+    <script type="text/javascript" src="js/browser_detect.js"></script>
+    <script type="text/javascript">
+        function upgrade_btn () {
+            if (browser.isIE)
+            {
+                document.write("<a href=\"http://www.microsoft.com/windows/internet-explorer/\">Upgrade Now!</a>");
+            }
+            //firefox
+            if (browser.isFirefox)
+            {
+                document.write("<a href=\"http://www.mozilla.com/en-US/firefox/upgrade.html\">Upgrade Now!</a>");
+            }
+            //safari
+            if (browser.isSafari)
+            {
+                document.write("<a href=\"http://www.apple.com/safari/download/\">Upgrade Now!</a>");
+            }
+            //opera
+            if (browser.isOpera)
+            {
+                document.write("<a href=\"http://www.opera.com/download/\">Upgrade Now!</a>");
+            }
+            //sorry netscape
+            if (browser.isNS)
+            {	//
+                document.write("<a href=\"http://www.mozilla.com/en-US/firefox/upgrade.html\">Upgrade Now!</a>");
+            }
+
+        }
+    </script>
+</head>
+    <body>
+        <div class="container">
+            <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="section1" style="height: 900px;">
+                <div class="inner_container" style="width: 960px;">
+                    <h1>
+                        MARtinm.net <br />
+                        <span class="subtext">software enginner/web developer/designer </span>
+                    </h1>
+
+                    <img height="8" width="960" src="images/content_bg_top.png" alt="">
+                    <p class="contactText">
+                        <span style="font-size: 2.5em;padding-top: 5px;">Welcome!</span><br /> <br />
+                        <span style="font-size: 1.4em;line-height: 1.3em;">Unfortunately, you are using a sub-optimal browser for viewing this website. Please consider an upgrade.
+                            <span style="">
+                                <script type="text/javascript">
+                                upgrade_btn ()
+                                </script>
+                            </span>
+                        </span>
+                    </p>
+                    <img height="8" width="960" src="images/content_bg_bottom.png" alt="">
+
+                    <div id="footer"><p>&copy; 2010-2012 Martin Micunda. All rights reserved.</p></div>
+                </div><!-- End inner_container-->
+            </div><!-- End section1 -->
+        </div><!-- End container -->
+    </body>
+</html>

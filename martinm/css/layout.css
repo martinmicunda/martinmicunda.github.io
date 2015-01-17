@@ -1,0 +1,510 @@
+@font-face {
+	font-family: 'Gabriola';
+    src: url(../fonts/gabriola.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+a {outline: 0 none;} /* prevent dotted border */
+body {
+	background-color: #2a2a2a;
+    color: #80664C;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 30;
+}
+.inner_container, .inner_container2, .inner_container3, .inner_container4 {
+	height: auto;
+    margin: 0 auto;
+    position: relative;
+    width: 1036px;
+} 
+.inner_container2 {
+	width: 960px;
+    top: -65px;
+}
+.inner_container3, .inner_container4 {
+    top: -95px;
+    padding-top: 78px;
+}
+#block_2 {
+	padding-top: 50px;
+}
+#block_4 {
+    padding-top: 80px;
+}
+.section1{
+	background: #2a2a2a url('../images/section_1_bg2.jpg') repeat;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.section2 {
+	width:100%;
+	min-height:750px;
+	height:auto !important;
+	background: url('../images/Untitled-2.png') repeat transparent;
+	position:relative;
+	top:0px;
+    padding: 0 0 176px;
+    color: #775f47;	
+    text-shadow: 1px 1px 0 #fff; 
+}
+.section2:after {
+	content: '';
+	width:100%;
+	height:248px;
+	background:url('../images/section_2_top2_bg.png') no-repeat left top;
+	position: absolute;
+	top:-235px;
+}
+.section3 {
+	background: #fff url('../images/section3_bg.png') repeat;
+    height: auto !important;
+    padding: 30px 0 176px;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.section3:after {
+	content: '';
+	background: url('../images/section3_bg_top.png') no-repeat left top;
+    height: 248px;
+    position: absolute;
+    top: -235px;
+    width: 100%;
+}
+.section4{
+	background: url('../images/section_1_bg2.jpg') repeat;
+	width:100%;
+	min-height:750px;
+	height:auto !important;
+	position:relative;
+	top:0;
+	padding-top:0;
+}
+.section4:before {
+	content: '';
+	width:100%;
+	height:248px;
+	background:url('../images/section4_bg_top.png') no-repeat left top;
+	position: absolute;
+	top:-235px;
+} 
+.margin_top_twenty {margin-top: 20px;}
+.margin_top_ten {margin-top: 10px;}
+
+/*-- Main Navigation ================================================================ --*/
+#primary_nav {
+    position: fixed;
+    right: 16px;
+    top: 30%;
+    z-index: 9999;
+}
+#primary_nav li {
+    height: 59px;
+    width: 140px;
+	text-align: center;
+	background: transparent url('../images/nav_button.png') no-repeat right top;
+    list-style-type: none;
+    margin-top: 10px;
+    position: relative;
+	 
+}
+#primary_nav a {
+    display: block;
+	text-align: center;
+	padding: 15px 0;
+    color: #fff;
+	font-family: 'Gabriola',Arial,Helvetica,sans-serif;    
+    text-decoration: none; 
+	font-size: 1.5em;
+	font-weight: bold;
+	outline: 0; /* prevent dotted border in Firefox */
+	letter-spacing: 0.5px;
+    text-shadow: 1px 1px 0 #000000;	
+}
+#primary_nav a:hover, #primary_nav  a.active {color: #820902;}
+/*-- End Main Navigation ================================================================ --*/
+
+/*-- First Section ================================================================ --*/
+.section1 h1 { 
+	float: left; 
+	border: 1px solid #C3A06C;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 0 0 28px 9px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    font-family: 'Gabriola',Arial,Helvetica,sans-serif;
+    font-size: 3.0em;
+    letter-spacing: 0.5px;
+    margin: 30px 0 60px;
+    outline: 0 none; /* prevent dotted border in Firefox */
+    padding: 30px;
+    text-shadow: 1px 1px 0 #000000;   
+    }
+.section1 h1 .subtext {font-family: 'Gabriola',Arial,Helvetica,sans-serif; font-size: 0.5em;line-height: 1.5em;letter-spacing: 0.5px;}    
+.phone {position: relative; top: 120px; left: 30px;}
+.screens-3D {position: relative; top: 30px; left: 18px;}
+.brushes {position: relative; top: 134px; right: 70px;}
+/*-- END First Section ================================================================ --*/
+
+/*-- Second Section ================================================================ --*/
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .tabs-hide {
+        display: none;
+    }
+}	
+/* Hide useless elements in print layouts... */
+@media print {
+    .tabs-nav {
+        display: none;
+    }
+}
+.screwLeft{left: 15px; position: relative; top: 40px; z-index: 5;}
+.screwRight{float: right; right: 20px; position: relative; top: 40px; z-index: 5;}
+/* Skin */
+.tabs-nav {
+    list-style: none;
+	background:url('../images/section_2_nav_bg.png') no-repeat;
+	height: 80px; 
+	width: 960px;
+	position: relative;     
+}
+.tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.tabs-nav li {
+    float: left;
+    margin: 25px 44px 0px;
+    height: 59px;
+    width: 150px; 
+	background:url(../images/nav_button2.png) no-repeat;
+}
+.tabs-nav a, .tabs-nav a span {
+    display: block;
+    padding: 0 0px; 
+}
+.tabs-nav a {
+	display: block;
+    position: relative;
+    z-index: 2;
+    color: #775f47;
+    text-align: left;
+	font-weight: bold;
+    text-decoration: none;
+	height: 59px;  
+	font-family: 'Gabriola', Arial, Helvetica, sans-serif;	
+	font-size: 1.5em;
+    line-height: 1.0em;	
+	font-weight: bold;
+    letter-spacing: 1px;	
+    text-shadow: 1px 1px 0 #fff; 	
+    padding: 8px 0 0 24px; 
+}
+.tabs-nav .tabs-selected a, .tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active {
+	background: url('../images/nav_button_hover.png') no-repeat;
+	background-repeat: no-repeat;
+	color: #820902;
+    outline: 0; /* prevent dotted border in Firefox */
+}
+.subtext {font-family: Arial, Helvetica, sans-serif; font-size:10px; letter-spacing: 0px; line-height: 1.0em;}
+.tabs-nav .tabs-selected a:link, .tabs-nav .tabs-selected a:visited, .tabs-nav .tabs-disabled a:link, .tabs-nav .tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+#section2_middle_bg {background: url('../images/section_2_middle_bg.png') repeat-y;height: auto;}
+.tabs-container {padding: 35px 20px 15px;}
+.section2 h2 {  
+	font-family: 'Gabriola', Arial, Helvetica, sans-serif;		
+	font-size: 3em;	
+	font-weight: bold;
+    letter-spacing: 1px;	
+    text-shadow: 1px 1px 0 #fff; 
+    padding-bottom: 10px;	
+}
+.section2 p {margin-bottom: 10px;line-height: 1.1em;text-align: justify;text-shadow: 1px 1px 0 #fff; }
+.section2 h4 {
+	font-family: 'Gabriola', Arial, Helvetica, sans-serif;		
+	font-size: 1.5em;	
+	font-weight: bold;
+    letter-spacing: 1px;	
+    text-shadow: 1px 1px 0 #fff; 
+    line-height: 1.0em;
+}
+/* contact */
+.section2 h3 {
+	font-family: 'Gabriola', Arial, Helvetica, sans-serif;		
+	font-size: 2em;	
+	font-weight: bold;
+    letter-spacing: 1px;	
+    text-shadow: 1px 1px 0 #fff; 
+    text-align: center;
+    line-height: 2.4em;
+}
+.section2 h3:before {
+	content: '';
+	background-image: url('../images/mail.png');
+	height: 52px;
+    left: 30px;
+    position: absolute;
+    top: 10px;
+    width: 43px;
+}
+.contact-column {background-image: url(../images/column_bg2.png); background-repeat:no-repeat; width:245px; height:261px; position:relative;  margin-left:0px;} 
+.contact-text {width:245px; position:relative; text-align:center; letter-spacing:1px; font-size: 15px; line-height:24px;}
+.contact-text a {font-size: 13px; text-decoration: none; border-bottom: 1px dashed; color: #775f47;}
+.contact-text a:hover {text-decoration: none; border-bottom: 0px;color: #820902;}
+.contact-text2 {font-size:11px; font-style:italic; margin-left:25px; line-height: 14px; width:200px; padding-top:10px; text-align:center;}
+a.contactcol-btn {background-image:url(../images/button_bg.png); text-decoration: none;
+					background-repeat:no-repeat; 
+					background-position:center; 
+					width:110px; height:35px; 
+					display:block; 
+					margin: 10px auto;
+					font-weight: bold; 
+					line-height: 33px;
+					color: #775f47;
+				}
+a:hover.contactcol-btn  {font-weight: bold; color: #820902;background:url(../images/button_bg_hover.png) no-repeat;}
+h4.cntct-name {font-family:'Arial'; font-size:17px; font-weight:normal; letter-spacing:1px; margin-bottom:0px; padding-bottom:0px; }
+a.linkedin {background-image:url(../images/linkedin-ico.jpg); background-repeat:no-repeat; width: 100px; height: 25px; padding-left: 25px; text-decoration: underline; border-bottom: 0px; font-style:italic; font-size:11px; padding-bottom:8px; padding-top:2px;color:#775f47; letter-spacing:1px;outline: 0; }
+a.linkedin:hover {text-decoration: none; background-image:url(../images/linkedin-ico-on.jpg); color: #820902;}
+.space {margin-top: 1px;}
+a.skype {background-image:url(../images/skype-ico.jpg); background-repeat:no-repeat; width: 100px; height: 25px; padding-left: 25px; text-decoration: underline; border-bottom: 0px; font-style:italic; font-size:11px; padding-bottom:8px; padding-top:2px;color:#775f47; letter-spacing:1px;outline: 0;}
+a.skype:hover {text-decoration: none; background-image:url(../images/skype-ico-on.jpg);color: #820902;}
+.certificate {background-image:url('../images/certificate_bg.png'); background-repeat: no-repeat; width: 245px; height: 154px;margin-top: 15px;
+    padding-left: 10px;
+    padding-top: 10px;}
+.contact_and_certi_wrapper {float:right; width:245px; height:780px; margin-right:0px;  margin-left: 20px;}
+.section2 ol li {margin-left: 20px; list-style-type: lower-roman; margin-bottom: 10px; }
+.section2 ol li p {line-height: 1.1em; font-size: 1.0em; }
+#section2_footer {background:url(../images/section_2_footer_bg.png) no-repeat;height: 80px;width: 960px;}
+embed {
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-box-shadow: 4px 4px 14px #000;
+    -webkit-box-shadow: 4px 4px 14px #000;
+    box-shadow: 4px 4px 14px #000;
+}
+/*-- End Second Section ================================================================ --*/
+
+/*-- Third Section ================================================================ --*/ 
+.portfolioWrapper {
+	display: block;
+	margin-bottom: 20px;
+	color: #fff;
+	font-family: 'Gabriola', Arial, Helvetica, sans-serif;	
+	font-weight: bold;
+    letter-spacing: 0.5px;	
+    text-shadow: 1px 1px 0 #000;    
+}
+.portfolioDescriptionWrapper {
+	margin-left: 15px;
+	float: left;
+	width: 389px;
+}
+.portfolioImage {
+	width: 590px;
+	height: 375px;
+    border: 1px solid #C3A06C;
+	padding: 7px;
+	border-radius: 9px;
+	-moz-box-shadow: 0px 0px 28px 9px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 28px 9px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 28px 9px rgba(0, 0, 0, 0.5);
+	clear: left;
+	float: left;
+}
+.portfolioImage img {border-radius: 9px;}
+.portfolioImage .bottomImageShadow {
+	background: url("../images/image_shadow_bottom.png") no-repeat transparent;
+	width: 590px;
+	height: 26px;	
+	margin-top: 8px;
+}
+h2.portfolioTitle, h3.portfolioTitle {
+	float: left;
+	background: url('../images/title_middle_bg.png') repeat-x transparent; 
+    font-size: 2.0em; 
+    padding: 10px 4px;
+    margin-bottom: 10px;
+}
+h3.portfolioTitle {font-size: 1.5em;}
+.portfolioTextbox {
+	background: url('../images/portfolio_textbox_bg.png') repeat-y transparent; 
+    width: 389px;	
+    padding: 0 8px;
+	font-family: Arial, Helvetica, sans-serif;    
+ 	line-height: 1.3em; 
+ 	font-size: 0.766em; 
+ 	font-weight: 600;   
+}
+.portfolioTextbox li {
+	background: url("../images/check.png") no-repeat scroll 0 1px transparent;
+	display: inline-block;
+    text-indent: 20px;
+    width: 49%;
+    line-height: 1.6em; 
+}
+img.last {margin-bottom: 10px;}
+.compatible {padding-left: 19px;} 
+ul.portfolioButtonsBox {margin: 20px 0; text-align: center;}
+ul.portfolioButtonsBox li {
+	background: url('../images/small_button_black_hover.png') no-repeat transparent; 
+	width: 110px;
+	height: 35px;
+	display: inline-block;	
+	margin-left: 20px;
+	padding-top: 4px;
+}
+ul.portfolioButtonsBox li a {
+	text-decoration: none;
+	line-height: 1.1em;	 
+	font-size: 1.3em;
+	color: #fff;	
+}
+ul.portfolioButtonsBox li a:hover {color: #820902;}
+.thumbImages {
+	clear: both;
+	margin-top: 20px;
+	position: relative;
+	top: 35px;	
+	width: 590px;
+	border: 1px solid #C3A06C;
+    padding: 10px 7px 0;
+	border-radius: 9px;
+	-moz-box-shadow:0px 0px 28px 9px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:0px 0px 28px 9px rgba(0, 0, 0, 0.5);
+	box-shadow:0px 0px 28px 9px rgba(0, 0, 0, 0.5);
+    display: none;
+} 
+ul.source li {margin-left: 15px!important;}
+.thumbImages img {border: 1px solid #C3A06C; margin: 0 6px;}
+.paddingTop-50 {padding-top: 50px;}
+ /*-- End Third Section ================================================================ --*/
+
+/*-- Fourth Section ================================================================ --*/
+.section4 h2 {
+    background: url("../images/title_middle_bg.png") repeat-x scroll 0 0 transparent;
+    font-family: 'Gabriola',Arial,Helvetica,sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 0 #000;
+}
+.contactText {
+    background: url('../images/content_bg_middle.png') repeat-y;
+    height: auto;
+    clear: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 8px 16px;
+    text-align: justify;
+    color: #fff;
+}
+.contactText a {color: #fff;}
+.contactText a:hover {color: #820902;}
+#contact {clear:both;float: left;width: 50%;margin-top: 30px; color: #fff;}
+.section4 #name, .section4 #email, .section4 #message, .section4 #successSent {
+    background: url("../images/portfolio_textbox_bg.png") repeat-y scroll 0 0 transparent;
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 0 16px 3px;
+    margin: 0;
+    width: 400px;
+    border: 0;
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+form label {position: relative; top: 10px;}
+.sendButton {
+    background: url("../images/small_button_black_hover.png") no-repeat scroll 0 0 transparent;
+    font-family: 'Gabriola', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    height: 35px;
+    width: 110px;
+    border: 0;
+    margin-top: 25px;
+    color: #FFFFFF;
+    font-size: 1.3em;
+    line-height: 1.1em;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    text-shadow: 1px 1px 0 #000;
+    cursor: pointer;
+}
+.sendButton:hover, input:hover {color: #820902;}
+.borderMap {
+    border: 1px solid #C3A06C;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 0 0 28px 9px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    margin-right: 6px;
+    float: right;
+    height: 350px;
+    padding: 7px;
+    width: 425px;
+}
+.borderMap img {border-radius: 9px 9px 9px 9px;}
+.loading {
+    float:right;
+    background:url('../images/ajax-loader.gif') no-repeat 1px;
+    height:28px;
+    width:28px;
+    display:none;
+}
+#footer {width: 960px; margin: 0 auto;clear: both;padding-top: 20px;}
+#footer p {
+    border: 1px solid #C3A06C;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 0 0 28px 9px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    font-family: 'Gabriola',Arial,Helvetica,sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 0.5px;
+    outline: 0 none;
+    padding: 5px 10px;
+    bottom: 0;
+    text-shadow: 1px 1px 0 #000000;
+    width: 350px;
+    margin-left: 305px;
+    text-align: center;
+}
+textarea{resize: none}
+/*-- End Fourth Section ================================================================ --*/
+
+/*-- Cloud ================================================================ --*/
+.cloud1, .cloud2, .cloud4, .cloud5, .cloud6, .cloud7, .cloud8, .cloud9, .cloud10, .cloud11 {
+    background: url("../images/home-buble2B.png") no-repeat scroll 0 0 transparent;
+    height: 168px;
+    position: absolute;
+    top: 0;
+    width: 346px;
+    z-index: 2;
+}
+.cloud1, .cloud9 {left: 10px;}
+.cloud2, .cloud7, .cloud10 {right: 100px;}
+.cloud4 {right: 80px;}
+.cloud5 {left: 70px;}
+.cloud6 {left: 0px;}
+.cloud8 {right: 10px;}
+.cloud11 {left: 34px;}

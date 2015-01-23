@@ -93,4 +93,54 @@ body.nav-hidden {
         -webkit-transform: translate3d(0px, 0, 0px);
     }
 }
-
+.navbar-default .navbar-nav>li>a {
+    color: #444;
+    border: 0;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: $accent;
+    background-color: transparent;
+}
+.navbar-brand {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    .logo {
+        color: #ffffff;
+    }
+    > span {
+        background-color: $accent;
+        padding: 10px;
+    }
+}
+.navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.navbar-default .navbar-toggle {
+    border-color: $accent;
+}
+.navbar-default .navbar-toggle .icon-bar,  {
+    background-color: $accent;
+}
+.navbar-toggle {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.nav > li:last-child {
+    border-bottom: 0 solid transparent;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+}

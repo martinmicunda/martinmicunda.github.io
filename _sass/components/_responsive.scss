@@ -15,7 +15,11 @@
         margin:1.5em 10%;
     }
 }
-
+@media (max-width: 768px) {
+    .nav > li {
+        border-bottom: 1px solid #00b1e1;
+    }
+}
 @media (max-width: 720px) {
 
     article {

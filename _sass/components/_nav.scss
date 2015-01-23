@@ -102,6 +102,11 @@ body.nav-hidden {
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     width: 100%;
 }
+.navbar {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: $accent;
     background-color: transparent;
@@ -137,6 +142,7 @@ body.nav-hidden {
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
 }
 .nav > li:last-child {
     border-bottom: 0 solid transparent;

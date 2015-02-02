@@ -11,13 +11,40 @@ author:
   twitter: martinmicunda
   bio: Full Stack Software Engineer
 ---
+![Employee Scheduling]({{ site.url }}/images/employee-scheduling.png "Employee Scheduling")
 Couple weeks ago I have started to work on one of my personal projects ([Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui)) and at that time I didn't think I will write any of my code in ES6 not because  I wouldn't want to try one of the cool [ES6 features](https://github.com/lukehoban/es6features) but I was more concerned how to automating my development workflow with ES6 and I also want to get my code to production until I watched Guy Bedford [video](https://www.youtube.com/watch?v=szJjsduHBQQ) from JSConf2014 where he was talking about ES6 modules workflow using JSPM. As you may guess JSPM solves a lot of my concerns and today I want to share my ES6 development and production workflow using JSPM.
 
 Before we start describing my workflow I want to mention that I am using Angular 1.3 for my project but you could use same ES6 workflow with EmberJS or React.
 
-Let's discuss JSPM first. JSPM is build on top of SystemJS, Module Loader and it use Traceur to compile ES6 code to ES5. (**Note:** at the time of writing SystemJS supports only Traceur compiler but there is an open [issue](https://github.com/ModuleLoader/es6-module-loader/pull/270) to support 6to5 too)
+If you want to know more about JSPM there is great article
 
-
-Add JSPM installed by npm
 
 describe jspm config in package.json file | show how to add package a show where packages are installes
+
+
+Install `JSPM` as a global through `NPM`:
+{% highlight bash %}
+npm install jspm -g
+{% endhighlight %}
+
+Create a project:
+{% highlight bash %}
+cd employee-scheduling-ui
+jspm init
+
+Package.json file does not exist, create it? [yes]:
+Would you like jspm to prefix the jspm package.json properties under jspm? [yes]:
+Enter a name for the project (optional):
+Enter baseURL (public folder) path [.]:
+Enter project code folder [./lib]:
+Enter jspm packages folder [./jspm_packages]:
+Enter config file path [./config.js]: jspm.config.js
+Configuration file config.js doesn't exist, create it? [yes]:
+Which ES6 transpiler would you like to use, Traceur or 6to5? [traceur]:
+{% endhighlight %}
+
+
+{% highlight javascript %}
+/* Some pointless Javascript */
+var rawr = ["r", "a", "w", "r"];
+{% endhighlight %}

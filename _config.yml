@@ -21,11 +21,10 @@ disqus:
 # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
 google_font: 'Droid+Sans:400,700'
 
-highlighter: pygments
-
 permalink:     pretty
 paginate_path: 'page:num'
 paginate:      10
 
-markdown:      kramdown
+markdown: kramdown
+highlighter: pygments
 

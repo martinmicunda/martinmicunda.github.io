@@ -125,16 +125,14 @@ article {
     }
     
     blockquote {
-        border:0;
         font-size:24px;
-        margin:1.2em -4em 1.2em 0;
         padding:0;
 
         p {
-            font-size:30px;
-            line-height:1.1;
-            color:$accent;
-            font-weight:600;
+            font-size: 16px;
+            line-height: 1.5;
+            padding-left: 15px;
+            color: #777;
         }
     }
 
@@ -209,27 +207,16 @@ article {
 
     .highlight {
         border:0;
-
+        margin-bottom: 1.5em;
         .lineno {
             color:$textmuted;
         }
     }
 
     pre {
-        border: 0;
-        padding: 1.5em 3em;
-        margin:0 0 1.5em;
-        background: whitesmoke;
-        border: 0;
-        border-radius: 2px;
-        border-bottom:1px solid #eee;
-        width:100%;
-        font-size:0.8em;
-        overflow-x: auto;
-        display:block;
-        
+        border: 1px solid #eee;
         code {
-            font-size:0.8em;
+            font-size:1em;
             border:0;
         }
     }

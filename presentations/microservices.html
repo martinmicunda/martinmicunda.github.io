@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+	<html class="sl-root base export loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Microservices: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+		<style id="user-css-output" type="text/css"></style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="64f91cd7aebfa6a38e3209206494e47d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 162px; height: auto;" data-block-id="8b5d4e0d0edba3c6f862632e985099e0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span><strong>Microservices</strong></span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 351px; height: auto;" data-block-id="fcf14a1b393ee9d276ad4ee7e7ebb7ce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>by Martin Micunda</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d9a043944411670c6ed9ec4d16d62181" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 448px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p>blog: <a href="http://martinmicunda.com" target="_blank">http://martinmicunda.com</a></p>
+
+<p>github: <a href="https://github.com/martinmicunda" target="_blank">martinmicunda</a></p>
+
+<p>twitter: <a href="https://twitter.com/martinmicunda" target="_blank">@martinmicunda</a></p>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 960px; height: 720.752351097179px; left: 0px; top: -9px;" data-block-id="9624fbaa5a54120f5e766392e7cd14d6"><div class="sl-block-content" style="z-index: 10;"><img style="visibility: visible;" data-natural-width="638" data-natural-height="479" data-src="microservices/1122227-microservices-architecture-4-638.jpg"></div></div></section><section><div class="sl-block" data-block-type="image" data-block-id="f214095c7bd5a1c37012f01e3108a2de" style="min-width: 30px; min-height: 30px; width: 360px; height: 98.88px; left: 29px; top: 136px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="375" data-natural-height="103" style="visibility: visible;" data-src="microservices/1124147-Screen_Shot_2015-03-02_at_12.18.54.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 57px; top: 33px; height: auto;" data-block-id="5e0df85d0b0b9fa7b3a79b148ee47739"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 15;">
+<h2>Monolith</h2>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 360px; height: 98.88px; left: 29px; top: 136px;" data-block-id="eb0c8505774c91ac50112a3bd72f2896"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="375" data-natural-height="103" style="visibility: visible;" data-src="microservices/1124147-Screen_Shot_2015-03-02_at_12.18.54.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 360px; height: 108.571428571429px; left: 524px; top: 136px;" data-block-id="f5f231ad4158a955bb657592d731bdaf"><div class="sl-block-content" style="z-index: 12;"><img style="visibility: visible;" data-natural-width="315" data-natural-height="95" data-src="microservices/1124157-Screen_Shot_2015-03-02_at_12.25.31.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 57px; top: 33px; height: auto;" data-block-id="4c4e589fb894673026fedc009bd1ad82"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 15;">
+<h2>Monolith</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 33px; height: auto;" data-block-id="cd64757fb883fe30f18eb2d348728af4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 17;">
+<h2 style="color:rgb(17, 17, 17)">Microservice</h2>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 360px; height: 98.88px; left: 29px; top: 136px;" data-block-id="9d1a1d7627f0e6e1ac77bc3a9bf465df"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="375" data-natural-height="103" style="visibility: visible;" data-src="microservices/1124147-Screen_Shot_2015-03-02_at_12.18.54.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 360px; height: 108.571428571429px; left: 524px; top: 136px;" data-block-id="fe069ad65cf99b7f0bdfbbc57a00ef9a"><div class="sl-block-content" style="z-index: 12;"><img style="visibility: visible;" data-natural-width="315" data-natural-height="95" data-src="microservices/1124157-Screen_Shot_2015-03-02_at_12.25.31.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 271.478873239437px; height: 300px; left: 74px; top: 321px;" data-block-id="bc80743c4a75209b5ca44606c4105a61"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="257" data-natural-height="284" style="visibility: visible;" data-src="microservices/1124158-Screen_Shot_2015-03-02_at_12.26.29.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 57px; top: 33px; height: auto;" data-block-id="13d27ae7ce2c1a19a3dec56b46d10a0b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 15;">
+<h2>Monolith</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 33px; height: auto;" data-block-id="df7e890d4c31f184aa6c804fa57eddc2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 17;">
+<h2 style="color:rgb(17, 17, 17)">Microservice</h2>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 360px; height: 98.88px; left: 29px; top: 136px;" data-block-id="363dfd6bcb910087f58c4d413c9eb132"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="375" data-natural-height="103" style="visibility: visible;" data-src="microservices/1124147-Screen_Shot_2015-03-02_at_12.18.54.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 360px; height: 108.571428571429px; left: 524px; top: 136px;" data-block-id="9f77ec444bc7c9347f1b88f1060d5b39"><div class="sl-block-content" style="z-index: 12;"><img style="visibility: visible;" data-natural-width="315" data-natural-height="95" data-src="microservices/1124157-Screen_Shot_2015-03-02_at_12.25.31.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 271.478873239437px; height: 300px; left: 74px; top: 321px;" data-block-id="8b7dfe30bca47dcfcaffc3d9debd4341"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="257" data-natural-height="284" style="visibility: visible;" data-src="microservices/1124158-Screen_Shot_2015-03-02_at_12.26.29.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 298.939929328622px; height: 300px; left: 555px; top: 330px;" data-block-id="9717cb2dd0c21adf864513601e28c9e5"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="282" data-natural-height="283" style="visibility: visible;" data-src="microservices/1124161-Screen_Shot_2015-03-02_at_12.26.39.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 57px; top: 33px; height: auto;" data-block-id="ac0b8978808d624727a619e91c288749"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 15;">
+<h2>Monolith</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 499px; top: 33px; height: auto;" data-block-id="193be618bc8e56a1a447620b39271865"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 17;">
+<h2 style="color:rgb(17, 17, 17)">Microservice</h2>
+</div></div></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="b3275f638e0a0303d4da42d9b31add28"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" data-block-id="b3b8acaa001e2bf00d8882c3145a1bc5" style="height: auto; min-width: 30px; min-height: 30px; width: 689px; left: 142.946426391602px; top: 178px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li><strong>Organised around Business Capabilities</strong></li>
+	<li>Products not Projects</li>
+	<li>Decentralised Governance</li>
+	<li>Decentralised Data Management</li>
+	<li>Scalability</li>
+	<li>Infrastructure Automation</li>
+	<li>Design for failure</li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="text" data-block-id="c96b6e720c1d25877a4179d3442a9819" style="height: auto; min-width: 30px; min-height: 30px; width: 750px; left: 105px; top: 268px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">"Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure."</p>
+
+<p style="text-align:left"><a href="http://www.melconway.com/Home/Committees_Paper.html" target="_blank">-- Melvyn Conway, 1967</a></p>
+</div></div></section><section><div class="sl-block" data-block-type="image" data-block-id="5aebe7c97e1030428912b522a5bac817" style="min-width: 30px; min-height: 30px; width: 710.741721854305px; height: 577px; left: 125px; top: 70px;"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="558" data-natural-height="453" data-src="microservices/1137414-Screen_Shot_2015-03-05_at_11.26.57.png"></div></div></section><section><div class="sl-block" data-block-type="image" data-block-id="469665c8bbdf522fa2f6fca54bd273b9" style="min-width: 30px; min-height: 30px; width: 844.291754756871px; height: 490px; left: 58px; top: 115px;"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="815" data-natural-height="473" data-src="microservices/1137430-Screen_Shot_2015-03-05_at_11.38.23.png"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="f63a2f69e35207cad9e1ce11bf72cf49"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="fcae19ef08646668caf9affec5bd53f5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li><strong>Products not Projects</strong></li>
+	<li>Decentralised Governance</li>
+	<li>Decentralised Data Management</li>
+	<li>Scalability</li>
+	<li>Infrastructure Automation</li>
+	<li>Design for failure</li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 716px; left: 122px; top: 153px;" data-block-id="eadb80fe1b9c59f30c653d3fdc30ec35"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ul>
+	<li><span style="color:rgb(48, 54, 51); text-align:start">Team should own a product over its full lifetime</span></li>
+	<li>
+<span style="color:rgb(48, 54, 51); text-align:start">Inspiration for this is Amazon's notion of </span><a href="https://queue.acm.org/detail.cfm?id=1142065" target="_blank">"you build, you run it"</a>
+</li>
+	<li><span style="color:rgb(48, 54, 51); text-align:start">Team takes full responsibility for the software in production</span></li>
+	<li><span style="color:rgb(48, 54, 51); text-align:start">Developers have day-to-day contact with how their software behaves in production and increases contact with their users</span></li>
+	<li><span style="color:rgb(48, 54, 51); text-align:start">Group take responsibility for failure</span></li>
+</ul>
+</div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="030173fb5e82d1e6463769f6103ff029"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="0288c64aaf1ad2665879e0710ea6c727"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li>Products not Projects</li>
+	<li><strong>Decentralised Governance</strong></li>
+	<li>Decentralised Data Management</li>
+	<li>Scalability</li>
+	<li>Infrastructure Automation</li>
+	<li>Design for failure</li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="height: auto; width: 716px; left: 122px; top: 225px;" data-block-id="baf9992956f60701faf800a64159daca"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ul>
+	<li><span style="color:rgb(48, 54, 51); text-align:start">Centralised governance is the tendency to standardise on single technology platforms</span></li>
+	<li>
+<span style="color:rgb(48, 54, 51); text-align:start">Different problems can be solve with different </span>technologies (hard to do that in monolith apps where we depends on one technology stack)</li>
+</ul>
+</div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="001b8b262da057375bb748a038ea870c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="24140c1b48e9e75396a74dea032740c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li>Products not Projects</li>
+	<li>Decentralised Governance</li>
+	<li><strong>Decentralised Data Management</strong></li>
+	<li>Scalability</li>
+	<li>Infrastructure Automation</li>
+	<li>Design for failure</li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 735.537662337662px; height: 433px; left: 112px; top: 134px;" data-block-id="e747d4969e6f16919979faa8c05f0154"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="654" data-natural-height="385" data-src="microservices/1125048-Screen_Shot_2015-03-02_at_16.38.57.png"></div></div></section><section><div class="sl-block" data-block-type="image" style="width: 654.216216216216px; height: 494px; left: 153px; top: 103px;" data-block-id="fd254994d7003f5826079a88155e0257"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="735" data-natural-height="555" data-src="microservices/1125212-Screen_Shot_2015-03-02_at_17.23.01.png"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="5023ff9184a3eb210883cd2db9fdaf51"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="551e7281cf8e13bad8a16366fbd8a89f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li>Products not Projects</li>
+	<li>Decentralised Governance</li>
+	<li>Decentralised Data Management</li>
+	<li><strong>Scalability</strong></li>
+	<li>Infrastructure Automation</li>
+	<li>Design for failure</li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 700px; height: 407.931034482759px; left: 130px; top: 140px;" data-block-id="f1ab9f6a6787453c49c86da4f5870125"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="580" data-natural-height="338" data-src="microservices/1125461-Screen_Shot_2015-03-02_at_18.51.36.png"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="df2c502a9f69cd6db6ab3fc2e757ad23"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="5ec4ffd793c9f9adde7241d816f59020"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li>Products not Projects</li>
+	<li>Decentralised Governance</li>
+	<li>Decentralised Data Management</li>
+	<li>Scalability</li>
+	<li><strong>Infrastructure Automation</strong></li>
+	<li>Design for failure</li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 243.75px; height: 300px; left: 358px; top: 200px;" data-block-id="086ab41d9101769de2381b88219f624f"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="260" data-natural-height="320" style="visibility: visible;" data-src="microservices/1126315-release_it.jpeg"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 232.835820895522px; height: 300px; left: 675px; top: 200px;" data-block-id="7352a4d6246f889a8279f452e160ef00"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="260" data-natural-height="335" style="visibility: visible;" data-src="microservices/1126316-continue.jpeg"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 201.156069364162px; height: 300px; left: 80px; top: 200px;" data-block-id="b80b419923531c62f7d779c0765dd6fb"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="232" data-natural-height="346" style="visibility: visible;" data-src="microservices/1126319-phoe.jpeg"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="40f18c47f57ee475cde916d6ad8f7168"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="5a5f454b84692872cba83d459cdb1fb1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li>Products not Projects</li>
+	<li>Decentralised Governance</li>
+	<li>Decentralised Data Management</li>
+	<li>Scalability</li>
+	<li>Infrastructure Automation</li>
+	<li><strong>Design for failure</strong></li>
+	<li>Versioning</li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 700px; height: 493.5px; left: 130px; top: 103px;" data-block-id="f7aadf661ddc978ba057ba04c318b063"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="600" data-natural-height="423" style="visibility: visible;" data-src="microservices/1126360-chaos_monkey.jpg"></div></div></section></section><section class="stack"><section><div class="sl-block" data-block-type="text" style="width: 918px; left: 29px; top: 33px; height: auto;" data-block-id="fa81b2bde17628d25aebb4fba49b166e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Characteristics of Microservices</h2>
+</div></div>
+<div class="sl-block intro-end" data-block-type="text" style="height: auto; width: 689px; left: 142.946426391602px; top: 178px;" data-block-id="844304774900f6f7fa06410e05cd277b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ol>
+	<li>Organised around Business Capabilities</li>
+	<li>Products not Projects</li>
+	<li>Decentralised Governance</li>
+	<li>Decentralised Data Management</li>
+	<li>Scalability</li>
+	<li>Infrastructure Automation</li>
+	<li>Design for failure</li>
+	<li><strong>Versioning</strong></li>
+</ol>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 431px; height: 431px; left: 265px; top: 100px;" data-block-id="900255396c16ca1706aec6cd798a807f"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="600" data-natural-height="600" data-src="microservices/1125403-git.sh-600x600.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 791px; left: 88px; top: 525px;" data-block-id="ef2434bf9a5ed6c0d7d1bd648b40d65d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Leave multiple old micsroservices versions running</li>
+	<li>Fast introduction vs. slow retirement asymmetry</li>
+</ul>
+</div></div></section></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 226px; height: auto;" data-block-id="e417e2efc278c496d1c7f29ddf184588"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>How big is microservice?</h1>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="0e6507a11f3847664fe59e0ce1566f1c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Why microservices?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="abf79a4529f531c7b2bd14dc8e798f57" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 179px; top: 170px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="color:rgb(51, 51, 51); text-align:left">Because monolithic apps lack:</p>
+
+<ul>
+	<li style="color:rgb(51, 51, 51); text-align:left">Scalability</li>
+	<li style="color:rgb(51, 51, 51); text-align:left">Modularity</li>
+	<li style="color:rgb(51, 51, 51); text-align:left">Availability</li>
+	<li style="color:rgb(51, 51, 51); text-align:left">Portability</li>
+	<li style="color:rgb(51, 51, 51); text-align:left">Decentralisation</li>
+	<li style="color:rgb(51, 51, 51); text-align:left">Partial Deployment</li>
+</ul>
+</div></div></section><section class="stack"><section><div class="sl-block" data-block-type="image" style="width: 750.193548387097px; height: 456px; left: 20px; top: 25px;" data-block-id="758aa477007c64f7506b5a56a7f425a3"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="816" data-natural-height="496" style="visibility: visible;" data-src="microservices/1125430-sketch.png"></div></div></section><section><div class="sl-block" data-block-type="image" style="width: 750.193548387097px; height: 456px; left: 20px; top: 25px;" data-block-id="68210826e359f05f0e3c65cb8496999e"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="816" data-natural-height="496" style="visibility: visible;" data-src="microservices/1125430-sketch.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 684px; left: 36px; top: 502px;" data-block-id="054522699abf3cd07f94600b7edd19a3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="text-align:left"><span style="font-size:32px">Rapid Provisioning</span></p>
+
+<p style="text-align:left"> </p>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 750.193548387097px; height: 456px; left: 20px; top: 25px;" data-block-id="940d269036028a44e8316805c60db524"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="816" data-natural-height="496" style="visibility: visible;" data-src="microservices/1125430-sketch.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 684px; left: 36px; top: 502px;" data-block-id="dcbaf50a68c4c85127c2dda9d4057b81"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="text-align:left"><span style="font-size:32px">Rapid Provisioning</span></p>
+
+<p style="text-align:left"><span style="font-size:32px">Monitoring</span></p>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 750.193548387097px; height: 456px; left: 20px; top: 25px;" data-block-id="7ea607d0d325cded151840ab3240537e"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="816" data-natural-height="496" style="visibility: visible;" data-src="microservices/1125430-sketch.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 684px; left: 36px; top: 502px;" data-block-id="3d96e0d69e48f943b7123a5fd52c733b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="text-align:left"><span style="font-size:32px">Rapid Provisioning</span></p>
+
+<p style="text-align:left"><span style="font-size:32px">Monitoring</span></p>
+
+<p style="text-align:left"><span style="font-size:32px">Rapid Application Deployment</span></p>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 750.193548387097px; height: 456px; left: 20px; top: 25px;" data-block-id="dbe7ef489d6372ed8a8c2c75245a60d5"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="816" data-natural-height="496" style="visibility: visible;" data-src="microservices/1125430-sketch.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 684px; left: 36px; top: 502px;" data-block-id="45e18fe9d5cb838ad3ab9af660cfc3ed"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<p style="text-align:left"><span style="font-size:32px">Rapid Provisioning</span></p>
+
+<p style="text-align:left"><span style="font-size:32px">Monitoring</span></p>
+
+<p style="text-align:left"><span style="font-size:32px">Rapid Application Deployment</span></p>
+
+<p style="text-align:left"><span style="font-size:32px">Devops Culture</span></p>
+</div></div></section></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="eb647e16b915bc24963986d720261bcd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Resources</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d32ee60d6351cc7b53215cffc881b888" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="http://martinfowler.com/articles/microservices.html" target="_blank">Microservices - Martin Fowler</a></p>
+
+<p><a href="https://www.packtpub.com/web-development/nodejs-design-patterns" target="_blank">Node.js Design Patterns -  Mario Casciaro</a></p>
+
+<p><a href="http://shop.oreilly.com/product/0636920033158.do" target="_blank">Building Microservices - Sam Newman</a></p>
+
+<p><a href="http://www.melconway.com/Home/Committees_Paper.html" target="_blank">Conway's Law</a></p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="055f0623f39509f2df0406e72a4012a8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Questions?</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 360px; left: 300px; top: 210px;" data-block-id="a5bdada38b7a30731620957d47edcdf3"><div class="sl-block-content" style="z-index: 12;"><img style="visibility: visible;" data-natural-width="900" data-natural-height="900" data-src="microservices/1004016-aaa-Man-With-Question.png"></div></div></section><section data-id="873a8e896342203974a4221344d80bc4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 196px; height: auto;" data-block-id="668d1cc1ab19a7807aaec6727b5368f5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Thanks!</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;" data-block-id="a7e678d575aa3df1accf2b4ed13b3e16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p>blog: <a href="http://martinmicunda.com" target="_blank">http://martinmicunda.com</a></p>
+
+<p>github: <a href="https://github.com/martinmicunda" target="_blank">martinmicunda</a></p>
+
+<p>twitter: <a href="https://twitter.com/martinmicunda" target="_blank">@martinmicunda</a></p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":356528,"slug":"microservices","title":"Microservices","description":"","visibility":"self","published_at":"2015-01-21T15:12:39.865Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/f1353e/decks.jpg","view_count":0,"user":{"id":267330,"username":"martinmicunda","name":"Martin Micunda","email":"martinmicunda86@gmail.com","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-Km3t-svuMjo/AAAAAAAAAAI/AAAAAAAAACs/cmBCUPHIcP8/photo.jpg?sz=50","pro":true,"enterprise":false,"enterprise_manager":false,"notify_on_receipt":false,"billing_address":null,"editor_tutorial_completed":true,"settings":{"id":88465,"present_controls":true,"present_upsizing":true,"editor_grid":true,"editor_snap":true,"developer_mode":false},"registered":true},"background_transition":"slide","transition":"fade","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"notes":{"f14a959349a2aa9d3e7fd68fb4c8e7b8":"As you know we have couple modules already AMD (RequireJS) - asynchronous, CommonJS (Node.js) - synchronous; option to use browserify for browser, ES6 try be best of both.  ","888b58a97dcd7e4965f8903837e7821d":"","fa2c949443b7a1dc48c69199d9826a0a":"The current browsers doesn’t really support ES6 (only few features are supported)..... So how can we get run our ES6 code in current browsers?\n","ffc92c6b62d936b414c5553417988d97":"We been discussing ES6 and I show you some ES6 feature but can we use these features today?","7e55f44c9f1678544bac288b5a0854f8":"Open source transpiler started by Google that maps ES6 to ES5. \n","f00942142156dfeb53eaa35c03c3468a":"It has much nicer output!","c5074aec025f31c01577da484557ebb2":"Another package manager… I hope in the future we could have one package manager that will fix all current problems...\n","340c3e9c8fd1994c1da74869f84f5ab6":"As we can see compilers has really good ES6 features support.\nhttp://kangax.github.io/compat-table/es6/","b5f90a5fccb83d2a3dc2fa2b24eb1392":"Sadly, the browser has five dominant and conflicting authoring formats for modules, matched by five consumption formats for modules: Globals, CommonJS (CJS), Asynchronous Module Definition (AMD), Universal Module Definition (UMD).","e0e5c3e1628186854ee09f896f26348e":"All major browsers are involved + lot of invited experts.","16400ce3339fec6d679c1dca030c4ff2":"Module loader can be static and dynamic"}}};
+		</script>
+
+		<script>
+			SLConfig.current_user = {
+				name: "Martin Micunda",
+				username: "martinmicunda",
+				pro: true
+			};
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				rolling_links: SLConfig.deck.rolling_links || true,
+				center: SLConfig.deck.center || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			if( SLConfig.deck.notes ) {
+				[].forEach.call( document.querySelectorAll( '.reveal .slides section' ), function( slide ) {
+
+					var value = SLConfig.deck.notes[ slide.getAttribute( 'data-id' ) ];
+					if( value && typeof value === 'string' ) {
+						slide.setAttribute( 'data-notes', value );
+					}
+
+				} );
+			}
+		</script>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-58620446-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+	</body>
+</html>

@@ -6,8 +6,6 @@ subtitle: "Prepare the development environment with Vagrant and Ansible"
 
 excerpt: "This is the first post of three-part blog series where we gonna build a hybrid mobile app with authentication that allows registered users view a gallery of photos they have uploaded via the camera phone."
 
-#cover_image: push_notifications.png
-
 author:
   name: Martin Micunda
   twitter: martinmicunda
@@ -20,6 +18,8 @@ This is the first post of three-part blog series where we gonna build a hybrid m
  - part III - build hybrid mobile app with Ionic and Apache Cordova
 
 The code for this project can be found on the [GitHub](https://github.com/martinmicunda/ionic-photo-gallery) and final app should look like this:
+![Ionic Photo Gallery Screenshots I](https://raw.githubusercontent.com/martinmicunda/ionic-photo-gallery/master/ionic-photo-gallery-screenshots-I.jpg "Ionic Photo Gallery Screenshots I")
+![Ionic Photo Gallery Screenshots II](https://raw.githubusercontent.com/martinmicunda/ionic-photo-gallery/master/ionic-photo-gallery-screenshots-II.jpg "Ionic Photo Gallery Screenshots II")
 
 ##Prerequisites
 You need to have installed follow tools on your machine for this project:
@@ -256,7 +256,7 @@ The final `Vagrantfile` should look like this:
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = "ubuntu/trusty64"
-    
+
     config.vm.network "forwarded_port", guest: 8100, host: 8100
     config.vm.network "forwarded_port", guest: 35729, host: 35729
     config.vm.network "forwarded_port", guest: 3000, host: 3000
@@ -306,8 +306,3 @@ $ vagrant ssh
 In this post I have showed you how to prepare the development environment with Vagrant and Ansible for our `ionic photo gallery` application and it second post we will start writing the back-end code with authentication for ionic app.
 
 Full project you can be found on the [GitHub](https://github.com/martinmicunda/ionic-photo-gallery).
-
-
-
-
-

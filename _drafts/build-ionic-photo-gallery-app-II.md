@@ -1,0 +1,1 @@
+I am using Redis It's fast and provides an in-memory key-value data store that we use to store our JWT token

@@ -305,4 +305,4 @@ $ vagrant ssh
 ##Conclusion
 In this post I have showed you how to prepare the development environment with Vagrant and Ansible for our `ionic photo gallery` application and it second post we will start writing the back-end code with authentication for ionic app.
 
-Full project you can be found on the [GitHub](https://github.com/martinmicunda/ionic-photo-gallery).
+Full project can be found on the [GitHub](https://github.com/martinmicunda/ionic-photo-gallery).

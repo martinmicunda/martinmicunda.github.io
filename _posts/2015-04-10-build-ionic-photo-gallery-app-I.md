@@ -134,7 +134,7 @@ The `mongodb` and `redis` services are started after vagrant provisioning takes 
 Download `ubuntu/trusty64`  virtualbox box:
 
 ```bash
-vagrant box add trusty64 http://files.vagrantup.com/trusty64.box
+vagrant box add ubuntu/trusty64
 ```
 
 >**NOTE:** This process may take a while, as most Vagrant boxes will be at least **200 MB** big.

@@ -14,7 +14,7 @@ author:
 This is the first post of three-part blog series where we gonna build a hybrid mobile app with authentication that allows registered users view a gallery of photos they have uploaded via the camera phone.
 
  - **part I - prepare the development environment with Vagrant and Ansible**
- - part II - build backend code with Node.js, MongoDB and Redis
+ - [part II - build backend code with Node.js, MongoDB and Redis](http://martinmicunda.com/2015/04/14/build-ionic-photo-gallery-app-II/)
  - part III - build hybrid mobile app with Ionic and Apache Cordova
 
 The code for this project can be found on the [GitHub](https://github.com/martinmicunda/ionic-photo-gallery) and final app should look like this:
@@ -303,6 +303,6 @@ $ vagrant ssh
 ```
 
 ##Conclusion
-In this post I have showed you how to prepare the development environment with Vagrant and Ansible for our `ionic photo gallery` application and it second post we will start writing the back-end code with authentication for ionic app.
+In this post I have showed you how to prepare the development environment with Vagrant and Ansible for our `ionic photo gallery` application and it [second post](http://martinmicunda.com/2015/04/14/build-ionic-photo-gallery-app-II/) we will start writing the back-end code with authentication for ionic app.
 
 Full project can be found on the [GitHub](https://github.com/martinmicunda/ionic-photo-gallery).

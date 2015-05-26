@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+	<html class="sl-root base export loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Ansible: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+		<style id="user-css-output" type="text/css"></style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="64f91cd7aebfa6a38e3209206494e47d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 162px; height: auto;" data-block-id="8b5d4e0d0edba3c6f862632e985099e0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span><strong>Ansible</strong></span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 351px; height: auto;" data-block-id="fcf14a1b393ee9d276ad4ee7e7ebb7ce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>by Martin Micunda</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d9a043944411670c6ed9ec4d16d62181" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 448px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p>blog: <a href="http://martinmicunda.com" target="_blank">http://martinmicunda.com</a></p>
+
+<p>github: <a href="https://github.com/martinmicunda" target="_blank">martinmicunda</a></p>
+
+<p>twitter: <a href="https://twitter.com/martinmicunda" target="_blank">@martinmicunda</a></p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="ad978f1a9a4f75b7fe5c120d1719a720"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Options to Automate IT</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 236.094117647059px; height: 232px; left: 141px; top: 171px;" data-block-id="fb69d6af1327ecaf2069f7ed0beea1b9"><div class="sl-block-content" style="z-index: 12;"><img style="visibility: visible;" data-natural-width="346" data-natural-height="340" data-src="ansible/1212277-pic-chef-logo.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="55344b1d5457c27584e840189000147f" style="min-width: 30px; min-height: 30px; width: 240px; height: 236.335877862595px; left: 600px; top: 167px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="524" data-natural-height="516" style="visibility: visible;" data-src="ansible/1212278-puppet-labs-logo.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8bd2d606ff11640eba67d4823f44aa6d" style="min-width: 30px; min-height: 30px; width: 360px; height: 216px; left: 79px; top: 445px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="600" data-natural-height="360" style="visibility: visible;" data-src="ansible/1212279-salt.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="533e7ed9c211ef220c841f90f7664a38" style="min-width: 30px; min-height: 30px; width: 246px; height: 246px; left: 582px; top: 415px;"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="800" data-natural-height="800" style="visibility: visible;" data-src="ansible/1212280-ansible_logo_black_square.png"></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="732e7b7b1e0c6a4a96398d983f299e86"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Reasons for Ansible</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="58ecbdb98afe3fa35400d1cd1fb8c726" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 217px; top: 264px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>No Master Server</li>
+	<li>No Agents (SSH)</li>
+	<li>Configuration in Yaml</li>
+	<li>Very easy to Learn (Great Docs)</li>
+</ul>
+</div></div></section><section><div class="sl-block" data-block-type="image" style="width: 700px; height: 525px; left: 143px; top: 70px;" data-block-id="13a56a6e43243775aa58006763fbc029"><div class="sl-block-content" style="z-index: 11;"><img style="visibility: visible;" data-natural-width="960" data-natural-height="720" data-src="ansible/1212318-Untitled_drawing.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="91ff099423003b42d77bc59a12e9ef89" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 206px; top: 532px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Ansible works via SSH. No Master Servers! No Agent on the Server is required!</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="e10c82eace8b741a35649795be0b47f4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>What can you automate?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5840def6838907bc42c88f6df2f70375" style="height: auto; min-width: 30px; min-height: 30px; width: 653px; left: 160px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Installation and configuration of services </li>
+	<li>Code deployment </li>
+	<li>Provisioning</li>
+</ul>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="ea26ab953c2e5a9b175dfb640b8cf3fb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Inventory</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="fb622331aa8d122fb6f718d34f04e49b" style="min-width: 30px; min-height: 30px; width: 500px; height: 300px; left: 230px; top: 200px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>[mongo-master]
+168.197.1.10
+
+[mongo-slaves]
+168.197.1.11
+168.197.1.12
+168.197.1.13
+
+[www]
+168.197.1.14</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="eab6a0e0f538ee04c70f3c79d0912f53"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Inventory</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 300px; left: 230px; top: 200px;" data-block-id="e32b245c08e66bad949cb6ce4a27e07c"><div class="sl-block-content" style="z-index: 12;"><pre><code>[mongo-master]
+168.197.1.10
+
+[mongo-slaves]
+mongo1.server
+mongo2.server
+mongo3.server
+
+[www]
+168.197.1.14</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="3d0ddaea998d28136ad07c7d172bcbbf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Playbooks</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f8d374cbd98f6f8775cc4b70518b6fff" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 192px; top: 245px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Contains one or more plays</li>
+	<li>Written in YAML
+	<ul>
+		<li>Declare configuration</li>
+		<li>YAML is not code</li>
+	</ul>
+	</li>
+	<li>Executed in the order it is written</li>
+</ul>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="055f0623f39509f2df0406e72a4012a8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Questions?</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 360px; left: 300px; top: 210px;" data-block-id="a5bdada38b7a30731620957d47edcdf3"><div class="sl-block-content" style="z-index: 12;"><img style="visibility: visible;" data-natural-width="900" data-natural-height="900" data-src="ansible/1004016-aaa-Man-With-Question.png"></div></div></section><section data-id="873a8e896342203974a4221344d80bc4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 196px; height: auto;" data-block-id="668d1cc1ab19a7807aaec6727b5368f5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Thanks!</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;" data-block-id="a7e678d575aa3df1accf2b4ed13b3e16"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p>blog: <a href="http://martinmicunda.com" target="_blank">http://martinmicunda.com</a></p>
+
+<p>github: <a href="https://github.com/martinmicunda" target="_blank">martinmicunda</a></p>
+
+<p>twitter: <a href="https://twitter.com/martinmicunda" target="_blank">@martinmicunda</a></p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":376046,"slug":"ansible","title":"Ansible","description":"","visibility":"self","published_at":"2015-01-21T15:12:39.865Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/536fc7/decks.jpg","view_count":0,"user":{"id":267330,"username":"martinmicunda","name":"Martin Micunda","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-Km3t-svuMjo/AAAAAAAAAAI/AAAAAAAAACs/cmBCUPHIcP8/photo.jpg?sz=50","pro":true,"enterprise":false,"enterprise_manager":false,"registered":true},"background_transition":"slide","transition":"fade","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"notes":{"f14a959349a2aa9d3e7fd68fb4c8e7b8":"As you know we have couple modules already AMD (RequireJS) - asynchronous, CommonJS (Node.js) - synchronous; option to use browserify for browser, ES6 try be best of both.  ","888b58a97dcd7e4965f8903837e7821d":"","fa2c949443b7a1dc48c69199d9826a0a":"The current browsers doesn’t really support ES6 (only few features are supported)..... So how can we get run our ES6 code in current browsers?\n","ffc92c6b62d936b414c5553417988d97":"We been discussing ES6 and I show you some ES6 feature but can we use these features today?","7e55f44c9f1678544bac288b5a0854f8":"Open source transpiler started by Google that maps ES6 to ES5. \n","f00942142156dfeb53eaa35c03c3468a":"It has much nicer output!","c5074aec025f31c01577da484557ebb2":"Another package manager… I hope in the future we could have one package manager that will fix all current problems...\n","340c3e9c8fd1994c1da74869f84f5ab6":"As we can see compilers has really good ES6 features support.\nhttp://kangax.github.io/compat-table/es6/","b5f90a5fccb83d2a3dc2fa2b24eb1392":"Sadly, the browser has five dominant and conflicting authoring formats for modules, matched by five consumption formats for modules: Globals, CommonJS (CJS), Asynchronous Module Definition (AMD), Universal Module Definition (UMD).","e0e5c3e1628186854ee09f896f26348e":"All major browsers are involved + lot of invited experts.","16400ce3339fec6d679c1dca030c4ff2":"Module loader can be static and dynamic"}}};
+		</script>
+
+		<script>
+			SLConfig.current_user = {
+				name: "Martin Micunda",
+				username: "martinmicunda",
+				pro: true
+			};
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				rolling_links: SLConfig.deck.rolling_links || true,
+				center: SLConfig.deck.center || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			if( SLConfig.deck.notes ) {
+				[].forEach.call( document.querySelectorAll( '.reveal .slides section' ), function( slide ) {
+
+					var value = SLConfig.deck.notes[ slide.getAttribute( 'data-id' ) ];
+					if( value && typeof value === 'string' ) {
+						slide.setAttribute( 'data-notes', value );
+					}
+
+				} );
+			}
+		</script>
+
+		
+
+	</body>
+</html>

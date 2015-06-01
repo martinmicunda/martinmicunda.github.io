@@ -970,12 +970,6 @@ string`;
 
 console.log(message.length); // 16
 
-// all whitespace inside of the backticks 
-// is considered to be part of the string
-let message = `Multiline 
-              string`;
-
-console.log(message.length); // 32
 </code></pre></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 189px; top: 79px;" data-block-id="befa173630351e8033931974556d87e0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
 <ul>
@@ -983,6 +977,35 @@ console.log(message.length); // 32
 </ul>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 503px; height: 155px; left: 240px; top: 179px;" data-block-id="36fc152448da0c3debca2a1e2f3b403c"><div class="sl-block-content" style="z-index: 16; border-style: solid; border-width: 1px;"><pre class="javascript"><code>let message = [ 
+    "Multiline ",
+    "string"
+].join("");
+
+let message = "Multiline " + 
+    "string";</code></pre></div></div></section><section data-id="604dda52497489bba7533683f4a1e874"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 134px;" data-block-id="44b58a8f5ff11bf2b96df33e310f1b21"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span>The old way</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 340px;" data-block-id="9c4c43ae0f8d84f7c16d4b00b958355f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><span>The new way</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 501px; height: 243px; left: 241px; top: 383px;" data-block-id="404a62191eb6fb115ba4ff379bda403d"><div class="sl-block-content" style="z-index: 14; border-style: solid; border-width: 1px;"><pre class="javascript"><code>let message = `Multiline 
+string`;
+
+console.log(message.length); // 16
+
+// all whitespace inside of the backticks 
+// is considered to be part of the string
+let message = `Multiline 
+              string`;
+
+console.log(message.length); // 32
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 189px; top: 79px;" data-block-id="aa89914ed0acc5369f7b35c7f84a531e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ul>
+	<li style="text-align: left;">Template strings can be multiline</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 503px; height: 155px; left: 240px; top: 179px;" data-block-id="c16e3c5485e365376009d090a63cd233"><div class="sl-block-content" style="z-index: 16; border-style: solid; border-width: 1px;"><pre class="javascript"><code>let message = [ 
     "Multiline ",
     "string"
 ].join("");
@@ -1150,8 +1173,9 @@ Thing.prototype.square = function(n) {
 	<li>The key can be any value, not just primitives</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="e03281a8d8d3d9a1a7db08c9331864b7"><div class="sl-block-content" style="z-index: 13;"><pre><code>let m = new Map();
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="e03281a8d8d3d9a1a7db08c9331864b7"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>let m = new Map();
 m.set("hello", 42);
+m.get("hello");
                 
 </code></pre></div></div></section><section data-id="fe4b8647593780a95a8a37052d6fc8f4"><div class="sl-block" data-block-type="text" style="width: 871px; left: 45px; top: 54px; height: auto;" data-block-id="e7e917d34e302185849dee87146387d5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Map</h2>
@@ -1162,8 +1186,9 @@ m.set("hello", 42);
 	<li>The key can be any value, not just primitives</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="84fd7be979331152128de16130cfd2f3"><div class="sl-block-content" style="z-index: 13;"><pre><code>let m = new Map();
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="84fd7be979331152128de16130cfd2f3"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>let m = new Map();
 m.set("hello", 42);
+m.get("hello");
                 
 // create an object
 const Person = {
@@ -1183,8 +1208,9 @@ console.log(m.get(Person)); // present
 	<li>The key can be any value, not just primitives</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="2ae1a553aea81c0cd753df1b691deade"><div class="sl-block-content" style="z-index: 13;"><pre><code>let m = new Map();
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="2ae1a553aea81c0cd753df1b691deade"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>let m = new Map();
 m.set("hello", 42);
+m.get("hello");
                 
 // create an object
 const Person = {
@@ -1221,7 +1247,7 @@ for (let [key,value] of m) {
 	<li>Iterable in insertion order</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="5b30046c37d99ab6a0dc3b81595850aa"><div class="sl-block-content" style="z-index: 13;"><pre><code>let s = new Set();
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="5b30046c37d99ab6a0dc3b81595850aa"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>let s = new Set();
 s.add("hello");
                 
 </code></pre></div></div></section><section data-id="c90ca9a2053f4b84d324645225aea254"><div class="sl-block" data-block-type="text" style="width: 871px; left: 45px; top: 54px; height: auto;" data-block-id="437e3e2f11147ce28d7081f96b17a803"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
@@ -1233,7 +1259,7 @@ s.add("hello");
 	<li>Iterable in insertion order</li>
 </ul>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="4d6f97243e766ffdf33e32f182deba29"><div class="sl-block-content" style="z-index: 13;"><pre><code>let s = new Set();
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="4d6f97243e766ffdf33e32f182deba29"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>let s = new Set();
 s.add("hello");
                 
 // create an object
@@ -1254,6 +1280,30 @@ s.has(Person) === true;
 </ul>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="9f1f118746279c0bfa2dec2c977a3463"><div class="sl-block-content" style="z-index: 13;"><pre><code>let s = new Set();
+s.add("hello");
+                
+// create an object
+const Person = {
+    name: "Charlie"
+}
+// add the complex value
+s.add(Person);
+// get the value
+s.has(Person) === true;
+
+// try re-add the same value, ignored
+s.add(Person);
+
+ </code></pre></div></div></section><section data-id="fa132ffd8dae66a0c1522720e26cdc4d"><div class="sl-block" data-block-type="text" style="width: 871px; left: 45px; top: 54px; height: auto;" data-block-id="0b3be87fd502a28cee93981a8752b099"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Set</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 769px; left: 96px; top: 128px;" data-block-id="13b70324a8e4a28732e1d6286b317211"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Collection of unique values (duplicates are ignored)</li>
+	<li>Iterable in insertion order</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 474px; left: 230px; top: 210px;" data-block-id="b41a25014acf0163d781be7970d1feef"><div class="sl-block-content" style="z-index: 13;"><pre><code>let s = new Set();
 s.add("hello");
                 
 // create an object
@@ -1377,13 +1427,13 @@ Promise.all(promises).then(function(results) {
 <p><strong>Tip:</strong> for large application use Bluebird promise as it's faster then native promise (<a href="http://programmers.stackexchange.com/questions/278778/why-are-native-es6-promises-slower-and-more-memory-intensive-than-bluebird" target="_blank">native promise vs bluebird promise</a>)</p>
 </div></div></section></section><section class="stack" data-id="071b2aac853bd13400329580e40064be"><section data-id="4bc777af0a0340854a683211c9f9c63d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="7dd8fcf484f214ef13fcb1a7a1f61871"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1>Generators</h1>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="84d137f93c5aeef70d6f2ab2e9d8b86e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="8bd90f56c8cc353098be7c560c40fa4d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="84d137f93c5aeef70d6f2ab2e9d8b86e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Syntax</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" data-block-id="91ff4716e8c3fb768361858f0eb6ae34" style="min-width: 30px; min-height: 30px; width: 500px; height: 30px; left: 229px; top: 227px;"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo () { ... }</code></pre></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="5ab390488aceb262189fc96f5f72d423" style="height: auto; min-width: 30px; min-height: 30px; width: 750px; left: 105px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p style="text-align:left"><span style="font-size:24px">A generator is defined by an * character and can be paused and resumed at any time in your app</span></p>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="e406ced09abaca75c49845cd4976ebe9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="c8643fcfc3bc3af0f7870cb0e8423580"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="e406ced09abaca75c49845cd4976ebe9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Syntax</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 229px; top: 227px;" data-block-id="ba122b8050d684de9f34adb5bef5fdef"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo () { ... }</code></pre></div></div>
@@ -1393,7 +1443,7 @@ Promise.all(promises).then(function(results) {
 <div class="sl-block" data-block-type="text" style="height: auto; width: 750px; left: 104px; top: 274px;" data-block-id="31e10b276a5d25341922db0cf6bbe76d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
 <p style="text-align:left"><span style="font-size:24px">A generator function is paused by executing a yield keyword in the body of the function</span></p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 229px; top: 357px;" data-block-id="f4e3ad3dbe77a3a51a98e775f39e23f4"><div class="sl-block-content" style="z-index: 15;"><pre class="javascript"><code>function *foo () { yield 'bar'; }</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="7f78601dfa6de65420aff82b90124032"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 229px; top: 357px;" data-block-id="f4e3ad3dbe77a3a51a98e775f39e23f4"><div class="sl-block-content" style="z-index: 15;"><pre class="javascript"><code>function *foo () { yield 'bar'; }</code></pre></div></div></section><section data-id="dac1d92ba1296da2d80af63c65b3cd88"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="7f78601dfa6de65420aff82b90124032"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Syntax</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 229px; top: 227px;" data-block-id="5e104e9a93660683fca3c1aa20649ef6"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo () { ... }</code></pre></div></div>
@@ -1407,7 +1457,7 @@ Promise.all(promises).then(function(results) {
 <div class="sl-block" data-block-type="text" style="height: auto; width: 748px; left: 100px; top: 403px;" data-block-id="8eeca397f30957ec60fe43c60477a110"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
 <p style="text-align: left;"><span style="font-size:24px">When a generator function is called, it returns a Generator Iterator object</span></p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 224px; top: 498px;" data-block-id="6125a0263405bf25ce732ea25097d105"><div class="sl-block-content" style="z-index: 17;"><pre class="javascript"><code>var iterator = foo(); </code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="7f5176beb70250582630df4a12294f51"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 224px; top: 498px;" data-block-id="6125a0263405bf25ce732ea25097d105"><div class="sl-block-content" style="z-index: 17;"><pre class="javascript"><code>var iterator = foo(); </code></pre></div></div></section><section data-id="1501fac7985900a1d9da24a6687817d4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="7f5176beb70250582630df4a12294f51"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Syntax</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 229px; top: 227px;" data-block-id="392c6d428abf9e2047c0924a367ce445"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo () { ... }</code></pre></div></div>
@@ -1424,7 +1474,7 @@ Promise.all(promises).then(function(results) {
 <div class="sl-block" data-block-type="code" style="width: 500px; height: 30px; left: 224px; top: 498px;" data-block-id="d0db13961812d8f398a6fe547bc14014"><div class="sl-block-content" style="z-index: 17;"><pre class="javascript"><code>var iterator = foo();  </code></pre></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 755px; left: 100px; top: 549px;" data-block-id="61c7e9c2cd798997bfca16a625fd40b0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
 <p style="text-align:left"><span style="font-size:24px">The Generator Iterator includes a next() method for stepping through the generator function and next() method returns an object with ‘value’ and ‘done’ properties.</span></p>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="a4a42a35c7657eb3a7d222df63bd8fc7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="6ecfa51aa8bfda9955888facf0b203c2"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="a4a42a35c7657eb3a7d222df63bd8fc7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Base Example</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 638px; height: 474px; left: 160px; top: 140px;" data-block-id="0fc44ccc05f6af9edbf259d8ddd73ae4"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo() {  
@@ -1435,7 +1485,7 @@ Promise.all(promises).then(function(results) {
   console.log('execution completes');
 }
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="3ae0bd74bd26f8d65636d4565a94a2ce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="f5d3d014c23804de5e004c07c3d9fd70"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="3ae0bd74bd26f8d65636d4565a94a2ce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Base Example</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 638px; height: 474px; left: 160px; top: 140px;" data-block-id="aebf9d4285afd1caac0052732a549eb1"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo() {  
@@ -1456,7 +1506,7 @@ let myFoo = foo();
 
 // console output
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="ada8c3744e953533c8feeb2bfde56258"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="cfd45a387a1fa568e05ddd2c23fbfad1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="ada8c3744e953533c8feeb2bfde56258"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Base Example</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 638px; height: 474px; left: 160px; top: 140px;" data-block-id="98c50efab6b7aeabfa4e093920d5d22d"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo() {  
@@ -1479,7 +1529,7 @@ console.log(myFoo.next());
 execution starts
 Object {value: "one", done: false}
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="39729e9fd40e28760e4ca8193d546d8a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="a1ea0f289e5c4c2d380d24bd072914fa"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="39729e9fd40e28760e4ca8193d546d8a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Base Example</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 638px; height: 474px; left: 160px; top: 140px;" data-block-id="0896d8a816011809cfb3037892d3de47"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo() {  
@@ -1503,7 +1553,7 @@ execution starts
 Object {value: "one", done: false}
 Object {value: "two", done: false}
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="d2d3cfaf7299cb05d5debf0a90ff2873"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="dd68113bb87076957529cf97ac8e2b7e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="d2d3cfaf7299cb05d5debf0a90ff2873"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Base Example</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 638px; height: 474px; left: 160px; top: 140px;" data-block-id="172b0f2e1bebd44547332a49901cc148"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo() {  
@@ -1528,7 +1578,7 @@ Object {value: "one", done: false}
 Object {value: "two", done: false}
 Object {value: "three", done: false}
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="8de10448d66271d0c945361537617cf3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="d2820a5ac4fa7bc6b5600671666cfb65"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="8de10448d66271d0c945361537617cf3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Base Example</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 638px; height: 474px; left: 160px; top: 140px;" data-block-id="747c27d4e2270970365800a32bbdb0dc"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>function *foo() {  
@@ -1554,7 +1604,7 @@ Object {value: "two", done: false}
 Object {value: "three", done: false}
 execution completes
 Object {value: undefined, done: true}
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="c9fac87c30744793624315332f0c8517"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="0d0353c00fd58e304e71a721c808fe07"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="c9fac87c30744793624315332f0c8517"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Real Example - Callbacks</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 659px; height: 490px; left: 160px; top: 175px;" data-block-id="c8966345d9638155ee5a2f76f2a00039"><div class="sl-block-content" style="z-index: 12;"><pre class="javascript"><code>var restaurant = function(complete) {  
@@ -1586,7 +1636,7 @@ Object {value: undefined, done: true}
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="8d0c833be6dfdf1abd314ca8bee94edf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="095d8660967726f6088bc339454f560c"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="8d0c833be6dfdf1abd314ca8bee94edf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Callbacks</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 659px; height: 490px; left: 160px; top: 175px;" data-block-id="912b38b6e911330616f611ee18e5ce4f"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var restaurant = function(complete) {  
@@ -1618,7 +1668,7 @@ Object {value: undefined, done: true}
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="1c89fc9516c04724854e96954e59a4a9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="35ad2d1acbb6e3479cb1650944d77758"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="1c89fc9516c04724854e96954e59a4a9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Callbacks</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 659px; height: 490px; left: 160px; top: 175px;" data-block-id="5f00c5d0c0d2a5aa434e203a8444e044"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var restaurant = function(complete) {  
@@ -1650,7 +1700,7 @@ Object {value: undefined, done: true}
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="b5a120f8fc6ac716a6960b50cd6217d3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="8b4c19ef7f7259a042d9792bfd495ac8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="b5a120f8fc6ac716a6960b50cd6217d3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Callbacks</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 659px; height: 490px; left: 160px; top: 175px;" data-block-id="7f8727a159dfd054546fe6b684898787"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var restaurant = function(complete) {  
@@ -1682,7 +1732,7 @@ Object {value: undefined, done: true}
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="5ba2c8bb94cc16e0aa7ef144e573e9f0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="37096223c502ed27876119615929e2eb"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="5ba2c8bb94cc16e0aa7ef144e573e9f0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Callbacks</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 659px; height: 490px; left: 160px; top: 175px;" data-block-id="3e54af76f8544d8ecbb4ac013f610d6b"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var restaurant = function(complete) {  
@@ -1714,7 +1764,7 @@ Object {value: undefined, done: true}
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="e17872b0fc1ab32daa37b1feddfa080f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="9642345a56c7e1cd56ada3fb1a5bf86e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="e17872b0fc1ab32daa37b1feddfa080f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Promises</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 720px; height: 352px; left: 119px; top: 244px;" data-block-id="d05e8071d88419c56afd4a52fca5bf8e"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var restaurant = function() {  
@@ -1739,31 +1789,52 @@ Object {value: undefined, done: true}
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="725d03520674743d9f595033c6d24e14"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="3d226f0e59aff96e2c33aec8f8b700ab"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="725d03520674743d9f595033c6d24e14"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Generators</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 824px; height: 274px; left: 68px; top: 283px;" data-block-id="210ea1f65bc7c957a5554068342f5fda"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var async = Bluebird.coroutine;  
-var restaurant = async(function *() {  
+<div class="sl-block" data-block-type="code" style="width: 824px; height: 274px; left: 68px; top: 283px;" data-block-id="210ea1f65bc7c957a5554068342f5fda"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>  
+var restaurant = function *() {  
   var order = yield takeOrder(['fish', 'sandwich', 'pizza']);
 
-    var meals = yield cookFood(order);
-    var total = 0;
-    var monies = yield Promise.all([eat(meals[0]), eat(meals[1]), eat(meals[2])]);
-    monies.forEach(function(r){ total += r; });
-    yield Promise.resolve(total);
+  var meals = yield cookFood(order);
+  var total = 0;
+  var monies = yield Promise.all([eat(meals[0]), eat(meals[1]), eat(meals[2])]);
+  monies.forEach(function(r){ total += r; });
+  yield Promise.resolve(total);
 
 
 
-});
+};
 </code></pre></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 124px;" data-block-id="b2385c746fa080f81d5c07274419b9a5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="6bca05f181c4861666d8994cbc71c26c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="bb73e4ab7c54e61531bd22e0f52bbb98"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="6bca05f181c4861666d8994cbc71c26c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - Generators</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 824px; height: 274px; left: 68px; top: 283px;" data-block-id="ac0933219f6eea6e7d59aa53b710bee4"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var async = Bluebird.coroutine;  
+<div class="sl-block" data-block-type="code" style="width: 824px; height: 274px; left: 68px; top: 283px;" data-block-id="ac0933219f6eea6e7d59aa53b710bee4"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code> 
+var restaurant = function *() {  
+  var order = yield takeOrder(['fish', 'sandwich', 'pizza']);
+  try {
+    var meals = yield cookFood(order);
+    var total = 0;
+    var monies = yield Promise.all([eat(meals[0]), eat(meals[1]), eat(meals[2])]);
+    monies.forEach(function(r){ total += r; });
+    yield Promise.resolve(total);
+  } catch(err) {
+    console.log(err.message);
+  }
+};
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 124px;" data-block-id="f1208de57fe6edbce447f310ced6caaf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
+</ul>
+</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="b9404f1c84d9e8c682de9c07d57883de"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Real Example - Generators</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 824px; height: 274px; left: 68px; top: 283px;" data-block-id="f752121a39bb8b97cc1eef19f0d769bc"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var async = Bluebird.coroutine;  
 var restaurant = async(function *() {  
   var order = yield takeOrder(['fish', 'sandwich', 'pizza']);
   try {
@@ -1777,14 +1848,21 @@ var restaurant = async(function *() {
   }
 });
 </code></pre></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 124px;" data-block-id="f1208de57fe6edbce447f310ced6caaf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 124px;" data-block-id="dc82a40c20ca99f42893fc4e6187c21e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <ul>
 	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
 </ul>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="f934bcdc158d36e048c946b3cbebde35"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="b77bd93f9c79813ee18bc3c79b728fdf"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;" data-block-id="f934bcdc158d36e048c946b3cbebde35"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Real Example - ES7 async and await</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 824px; height: 249px; left: 68px; top: 296px;" data-block-id="9b6f2f32dcd7a04454f195ef7a3eaccd"><div class="sl-block-content" style="z-index: 11;"><pre class="javascript"><code>var restaurant = async function() {  
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 198px;" data-block-id="5ce3438febd2890bf4af89c16650b996"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 824px; height: 274px; left: 68px; top: 283px;" data-block-id="39b9d48762a52b11173785348af3b754"><div class="sl-block-content" style="z-index: 13;"><pre class="javascript"><code>
+var restaurant = async function() {  
   var order = await takeOrder(['fish', 'sandwich', 'pizza']);
   try {
     var meals = await cookFood(order);
@@ -1796,12 +1874,7 @@ var restaurant = async(function *() {
     console.log(err.message);
   }
 };
-</code></pre></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 198px;" data-block-id="5ce3438febd2890bf4af89c16650b996"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<ul>
-	<li><a href="http://eng.localytics.com/better-asynchronous-javascript/" target="_blank">borrowing from Francois Ward blog</a></li>
-</ul>
-</div></div></section></section><section class="stack" data-id="6e2c68497280e9b6448f58fefb57f07a"><section data-id="9f19c1bffc002906a63bbc509b804a8b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="4fa5ce3ab33bc76799ffb445714f832e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section></section><section class="stack" data-id="6e2c68497280e9b6448f58fefb57f07a"><section data-id="9f19c1bffc002906a63bbc509b804a8b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="4fa5ce3ab33bc76799ffb445714f832e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Classes</h1>
 </div></div></section><section data-id="6567f30828c26b544dfa6abeae79042e"><div class="sl-block" data-block-type="text" style="height: auto; width: 761px; left: 100px; top: 311px;" data-block-id="1cfc47af56bb0e604b3892e7acd55943"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
 <ul>
@@ -1909,19 +1982,19 @@ console.log(employee.describe()); // Martin Micunda (ID: 1234)</code></pre></div
 <div class="sl-block" data-block-type="image" data-block-id="9a3d1c33731dca42081339707d2863d1" style="min-width: 30px; min-height: 30px; width: 438.97520661157px; height: 271px; left: 510px; top: 188px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="784" data-natural-height="484" data-src="es6-features/1442233-prototypal-inheritance.jpg"></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="feac2824b5760ef27b206b9c0f771185" style="height: auto; min-width: 30px; min-height: 30px; width: 703px; left: 129px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
 <p>Screenshots taken from Kyle Simpson’s <a href="http://frontendmasters.com/courses/advanced-javascript" target="_blank">Advanced JavaScript course</a> on Frontend Masters</p>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 288px; height: auto;" data-block-id="1cd014791005e0882a59be4a76e32519"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="098d53c9885dab5b7ffc2e08888d53a6"><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 288px; height: auto;" data-block-id="1cd014791005e0882a59be4a76e32519"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Classes Free Object</h2>
 
 <p>Kyle Simpson OLOO</p>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 288px; height: auto;" data-block-id="81383285cf9efa54238c6f4ec4d517a2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="9595e0ec472df97bcb817c75ef7422dc"><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 288px; height: auto;" data-block-id="81383285cf9efa54238c6f4ec4d517a2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Classes Free Object</h2>
 
 <p>Eric Elliot Factories</p>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 288px; height: auto;" data-block-id="08a432488c6b6ffd27eaefd1f8151734"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="297bf0df3484aa485e5dc2d344916797"><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 288px; height: auto;" data-block-id="08a432488c6b6ffd27eaefd1f8151734"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Classes Free Object</h2>
 
 <p>Douglas Crockford</p>
-</div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="30a618d70768df8d52c350bdd993b1a6"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</div></div></section><section data-id="f65e9e63c2395590b5357b3b65d9ab43"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="30a618d70768df8d52c350bdd993b1a6"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
 
@@ -1939,7 +2012,7 @@ let person = person({firstName:'Martin', lastName: 'Micunda');
 
 
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="704514ca27706c8f595e0e9c60ac5fcd"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</code></pre></div></div></section><section data-id="7372a9c65a4f3be7efbfe12b5a680e8d"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="704514ca27706c8f595e0e9c60ac5fcd"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
   // members methods
@@ -1955,7 +2028,7 @@ let person = person({firstName:'Martin', lastName: 'Micunda');
 let person = person({firstName:'Martin', lastName: 'Micunda');
  
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="f9209c75d84c805b3fc691e99babe933"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</code></pre></div></div></section><section data-id="4a81c4ab456ed15611778a18a1d5ddae"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="f9209c75d84c805b3fc691e99babe933"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
   // members methods
@@ -1973,7 +2046,7 @@ console.log(person.displayName()); // Martin Micunda
 
  
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="08b59a45a5c9e1f16e483bdc2a74ba48"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</code></pre></div></div></section><section data-id="bb6972d5ec6105a2063d940a6708789c"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="08b59a45a5c9e1f16e483bdc2a74ba48"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
   // members methods
@@ -2006,7 +2079,7 @@ function employee(spec) {
 }
 let martin = employee({firstName:'Martin', lastName: 'Micunda', employeeId: 1234});
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="365b38c4bc4bcdbf204de3a188e4e8b0"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</code></pre></div></div></section><section data-id="da6488f194b92fbe1235ebe63adfb757"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="365b38c4bc4bcdbf204de3a188e4e8b0"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
   // members methods
@@ -2039,7 +2112,7 @@ function employee(spec) {
 }
 let martin = employee({firstName:'Martin', lastName: 'Micunda', employeeId: 1234});
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="b50f060e92bbb96756983fd2084f0b33"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</code></pre></div></div></section><section data-id="16d91ac97d4bb0e28ff20cfed8f16ed0"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="b50f060e92bbb96756983fd2084f0b33"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
   // members methods
@@ -2072,7 +2145,7 @@ function employee(spec) {
 }
 let martin = employee({firstName:'Martin', lastName: 'Micunda', employeeId: 1234});
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="85a02d9ddc5b2fe3d8471a35fa0d2a10"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
+</code></pre></div></div></section><section data-id="82dbebdced15ad491bdd6f7dbd71bc34"><div class="sl-block" data-block-type="code" style="width: 836px; height: 675px; left: 62px; top: 13px;" data-block-id="85a02d9ddc5b2fe3d8471a35fa0d2a10"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function person(spec) {
   // initialize own members from spec
   let {firstName, lastName} = spec;
   // members methods
@@ -2106,9 +2179,9 @@ function employee(spec) {
 let martin = employee({firstName:'Martin', lastName: 'Micunda', employeeId: 1234});
 console.log(employee.describe()); // Martin Micunda (ID: 1234)
 
-</code></pre></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 313px; height: auto;" data-block-id="c0fca34db0b1173b736b053ca26027df"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</code></pre></div></div></section><section data-id="e4bc0c9e51dde7288a2096d191bc3526"><div class="sl-block" data-block-type="text" style="width: 937px; left: 12px; top: 313px; height: auto;" data-block-id="c0fca34db0b1173b736b053ca26027df"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Classes Free Object Resources</h2>
-</div></div></section><section><div class="sl-block" data-block-type="text" data-block-id="5b187a477b7bd64adc17f5cfd935d923" style="height: auto; min-width: 30px; min-height: 30px; width: 949px; left: 6px; top: 172px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+</div></div></section><section data-id="1aca3d2bfea0c79852ed0d3e5c5b3a32"><div class="sl-block" data-block-type="text" data-block-id="5b187a477b7bd64adc17f5cfd935d923" style="height: auto; min-width: 30px; min-height: 30px; width: 949px; left: 6px; top: 172px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
 <p><a href="https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3" target="_blank">The Two Pillars of JavaScript by Eric Elliott</a></p>
 
 <p><a href="https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a" target="_blank">Common Misconceptions About Inheritance in JavaScript</a><a href="https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a" target="_blank"> by Eric Elliott</a></p>
@@ -2122,63 +2195,7 @@ console.log(employee.describe()); // Martin Micunda (ID: 1234)
 <p><a href="http://christianalfoni.github.io/javascript/2015/01/01/think-twice-about-classes.html" target="_blank">Think twice about ES6 classes by Christian Alfoni</a></p>
 
 <p><a href="http://john-dugan.com/object-oriented-javascript-pattern-comparison/" target="_blank">Object Oriented JavaScript Pattern Comparison by John Dugan</a></p>
-</div></div></section><section><div class="sl-block" data-block-type="text" style="width: 937px; left: 23px; top: 50px; height: auto;" data-block-id="ba71a928026f874ddbc296075afe5d5d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
-<h2>Classes Free Object - Eric Elliot</h2>
-</div></div>
-<div class="sl-block" data-block-type="code" style="width: 480px; height: 213px; left: 0px; top: 184px;" data-block-id="bfbb53acec8a9a9056996832a6986a16"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 1px;"><pre class="javascript"><code>function Employee(name, title) {
-  Person.call(this, title); 
-  this.title = title;
-}
-Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee;
-Employee.prototype.describe = function() {
-  return Person.prototype.describe.call(this) 
-         + " (" + this.title + ")";
-}</code></pre></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 250px; left: 115px; top: 140px;" data-block-id="4df226d6d856b2154852638c15fc5779"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<p><span>The old way</span></p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 219px; left: 644px; top: 133px;" data-block-id="3b018a66ac8644f7f2cf15e5cc1bd2b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
-<p><span>The new way</span></p>
-</div></div>
-<div class="sl-block" data-block-type="code" style="width: 474px; height: 210px; left: 506px; top: 172px;" data-block-id="6f3fa0f642b570a1f0cfe63373b19e47"><div class="sl-block-content" style="z-index: 15; border-style: solid; border-width: 1px;"><pre class="javascript"><code>class Employee extends Person {
-  constructor(name, title) {
-    super(name);
-    this.title = title;
-  }
- 
-  describe() {
-    return super.describe() + " (" + this.title + ")"; 
-  }
-}</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="width: 656px; height: 300px; left: 167px; top: 400px;" data-block-id="7395fb1713f55367d42814b1b89b334d"><div class="sl-block-content" style="z-index: 16;"><pre><code>function person(spec) {
-    let {name, fullName='Micunda'} = spec;
-
-    let describe = function() { 
-      return `Person called ${name} ${fullName}.`;
-    };
-  
-    return Object.freeze({ 
-            describe,
-            name
-        });
-}
-
-function employee(spec) {
-    let {type} = spec;
-  
-    let {describe} = person(spec);
-  
-    // immutable (see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
-    return Object.freeze({ 
-            type,
-            describe
-        });
-}
-
-let martin = employee({name:'Martin', fullName: 'Tomas', type: 'engineer'});
-console.log(martin.describe());
-console.log(martin.type);</code></pre></div></div></section></section><section class="stack" data-id="7707789965c341844dc20da4af058bd0"><section data-id="edc0f8a19e6854e1f601877662f069c8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="db9449ba2dcee134620a08fcdaa61769"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+</div></div></section></section><section class="stack" data-id="7707789965c341844dc20da4af058bd0"><section data-id="edc0f8a19e6854e1f601877662f069c8"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="db9449ba2dcee134620a08fcdaa61769"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1>Modules</h1>
 </div></div></section><section data-id="7da91d814660827044def40c06d7a6fd">
 <div class="sl-block" data-block-type="text" style="height: auto; width: 687px; left: 137px; top: 195px;" data-block-id="766f221e8db8e1558db3528eea8b2502"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
@@ -2553,7 +2570,7 @@ System.import('module')
 		</div>
 
 		<script>
-			var SLConfig = {"deck": {"id":423791,"slug":"es6-features","title":"ES6 Features","description":"","visibility":"self","published_at":"2015-01-21T15:12:39.865Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/e87b2d/decks.jpg","view_count":0,"user":{"id":267330,"username":"martinmicunda","name":"Martin Micunda","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-Km3t-svuMjo/AAAAAAAAAAI/AAAAAAAAACs/cmBCUPHIcP8/photo.jpg?sz=50","pro":true,"enterprise":false,"enterprise_manager":false,"settings":{"id":88465,"present_controls":true,"present_upsizing":true},"registered":true},"background_transition":"slide","transition":"fade","theme_id":null,"theme_font":"montserrat","theme_color":"beige-brown","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"notes":{"f14a959349a2aa9d3e7fd68fb4c8e7b8":"As you know we have couple modules already AMD (RequireJS) - asynchronous, CommonJS (Node.js) - synchronous; option to use browserify for browser, ES6 try be best of both.  ","888b58a97dcd7e4965f8903837e7821d":"","fa2c949443b7a1dc48c69199d9826a0a":"The current browsers doesn’t really support ES6 (only few features are supported)..... So how can we get run our ES6 code in current browsers?\n","ffc92c6b62d936b414c5553417988d97":"We been discussing ES6 and I show you some ES6 feature but can we use these features today?","7e55f44c9f1678544bac288b5a0854f8":"Open source transpiler started by Google that maps ES6 to ES5. \n","f00942142156dfeb53eaa35c03c3468a":"It has much nicer output!","c5074aec025f31c01577da484557ebb2":"Another package manager… I hope in the future we could have one package manager that will fix all current problems...\n","340c3e9c8fd1994c1da74869f84f5ab6":"As we can see compilers has really good ES6 features support.\nhttp://kangax.github.io/compat-table/es6/","b5f90a5fccb83d2a3dc2fa2b24eb1392":"Sadly, the browser has five dominant and conflicting authoring formats for modules, matched by five consumption formats for modules: Globals, CommonJS (CJS), Asynchronous Module Definition (AMD), Universal Module Definition (UMD).","e0e5c3e1628186854ee09f896f26348e":"All major browsers are involved + lot of invited experts.","16400ce3339fec6d679c1dca030c4ff2":"Module loader can be static and dynamic","cc465e41e3e53a6438934915decebc60":"ES1-ES2 Standardisation\n\nES3 much of the core language used today\n\nES4 was once planned—and in fact a ton of work was done on it—but it was eventually scrapped as too ambitious","c0b35629abefe1015f92dfebfeba1844":"Compilers translate code one language to another. ex. Java to bytecode\n\nTranspilers translate code to the same language.","fc24b4936aa64e586ff895b8127dfae5":"it an can be any valid expression, even a function call:\nfunction bar(val) {\n  console.log( \"bar called!\" ); \n  return y + val;\n}\nfunctionfoo(x=y+3,z=bar(x)){ \n  console.log( x, z );\n}","4e88a1dbad403e3f65ea1736795afda0":"The property name shorthand","c28a9b08f9f096d3593f03b2ce520a86":"Backtick","d89e4375fdd1a46b544887023a82f3ba":"Backtick","57ad17736ee8bea4bed87d82c936d64e":"Those with much JS experience know that objects are the primary mechanism for creating unordered key/value-pair data structures, otherwise known as maps. How‐ ever, the major drawback with objects-as-maps is the inability to use a non-string value as the key.","312f057e4d0892bd163d36cf22235f46":"Brendan Aik","55eb4e17f186035e270245d69595b1f2":"code generators - for use of ECMAScript as a compilation target for other languages.\n\nMaking the language easier for code generators targeting the new edition.  Sounds like a cop out for Google \u0026 Microsoft to keep cooking up Go/Dart/TypeScript/CoffeeScript to run in browsers.","3b99edb95381a98c3ffd18717041b85d":"dollar sign and curly braces","ef61cec327b978882ec2108352b32b93":"arguments is object","79b7b902dc2bdf5f46b8bf9b89cb3a09":"the rest parameters needs to be last in function","edc0f8a19e6854e1f601877662f069c8":"The biggest impact","ddc9f1179f8b53d8e9c1377a61a44a5b":"http://john-dugan.com/object-oriented-javascript-pattern-comparison/"}}};
+			var SLConfig = {"deck": {"id":423791,"slug":"es6-features","title":"ES6 Features","description":"","visibility":"self","published_at":"2015-01-21T15:12:39.865Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/e87b2d/decks.jpg","view_count":0,"user":{"id":267330,"username":"martinmicunda","name":"Martin Micunda","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/-Km3t-svuMjo/AAAAAAAAAAI/AAAAAAAAACs/cmBCUPHIcP8/photo.jpg?sz=50","pro":true,"enterprise":false,"enterprise_manager":false,"settings":{"id":88465,"present_controls":true,"present_upsizing":true},"registered":true},"background_transition":"slide","transition":"fade","theme_id":null,"theme_font":"montserrat","theme_color":"beige-brown","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"notes":{"f14a959349a2aa9d3e7fd68fb4c8e7b8":"As you know we have couple modules already AMD (RequireJS) - asynchronous, CommonJS (Node.js) - synchronous; option to use browserify for browser, ES6 try be best of both.  ","888b58a97dcd7e4965f8903837e7821d":"","fa2c949443b7a1dc48c69199d9826a0a":"The current browsers doesn’t really support ES6 (only few features are supported)..... So how can we get run our ES6 code in current browsers?\n","ffc92c6b62d936b414c5553417988d97":"We been discussing ES6 and I show you some ES6 feature but can we use these features today?","7e55f44c9f1678544bac288b5a0854f8":"Open source transpiler started by Google that maps ES6 to ES5. \n","f00942142156dfeb53eaa35c03c3468a":"It has much nicer output!","c5074aec025f31c01577da484557ebb2":"Another package manager… I hope in the future we could have one package manager that will fix all current problems...\n","340c3e9c8fd1994c1da74869f84f5ab6":"As we can see compilers has really good ES6 features support.\nhttp://kangax.github.io/compat-table/es6/","b5f90a5fccb83d2a3dc2fa2b24eb1392":"Sadly, the browser has five dominant and conflicting authoring formats for modules, matched by five consumption formats for modules: Globals, CommonJS (CJS), Asynchronous Module Definition (AMD), Universal Module Definition (UMD).","e0e5c3e1628186854ee09f896f26348e":"All major browsers are involved + lot of invited experts.","16400ce3339fec6d679c1dca030c4ff2":"Module loader can be static and dynamic","cc465e41e3e53a6438934915decebc60":"ES1-ES2 Standardisation\n\nES3 much of the core language used today\n\nES4 was once planned—and in fact a ton of work was done on it—but it was eventually scrapped as too ambitious","c0b35629abefe1015f92dfebfeba1844":"Compilers translate code one language to another. ex. Java to bytecode\n\nTranspilers translate code to the same language.","fc24b4936aa64e586ff895b8127dfae5":"it an can be any valid expression, even a function call:\nfunction bar(val) {\n  console.log( \"bar called!\" ); \n  return y + val;\n}\nfunctionfoo(x=y+3,z=bar(x)){ \n  console.log( x, z );\n}","4e88a1dbad403e3f65ea1736795afda0":"The property name shorthand","c28a9b08f9f096d3593f03b2ce520a86":"Backtick","d89e4375fdd1a46b544887023a82f3ba":"Backtick","57ad17736ee8bea4bed87d82c936d64e":"Those with much JS experience know that objects are the primary mechanism for creating unordered key/value-pair data structures, otherwise known as maps. How‐ ever, the major drawback with objects-as-maps is the inability to use a non-string value as the key.","312f057e4d0892bd163d36cf22235f46":"Brendan Aik","55eb4e17f186035e270245d69595b1f2":"code generators - for use of ECMAScript as a compilation target for other languages.\n\nMaking the language easier for code generators targeting the new edition.  Sounds like a cop out for Google \u0026 Microsoft to keep cooking up Go/Dart/TypeScript/CoffeeScript to run in browsers.","3b99edb95381a98c3ffd18717041b85d":"backticks + dollar sign and curly braces","ef61cec327b978882ec2108352b32b93":"arguments is object","79b7b902dc2bdf5f46b8bf9b89cb3a09":"the rest parameters needs to be last in function","edc0f8a19e6854e1f601877662f069c8":"The biggest impact","ddc9f1179f8b53d8e9c1377a61a44a5b":"http://john-dugan.com/object-oriented-javascript-pattern-comparison/\n\nWhen your parents had you, you inherited their DNA — you received a copy of it. When they broke their leg, yours did not break. In JavaScript, when your parents break their leg, yours breaks too. ","511b1869ada9f356c0163cc31190e727":"ES4 was once planned—and in fact a ton of work was done on it—but it was eventually scrapped as too ambitious","3ac2c4a693aa0a8bce1ea9364f0ff968":"ES3 much of the core language used today\n"}}};
 			SLConfig.current_user = {
 				name: "Martin Micunda",
 				username: "martinmicunda",

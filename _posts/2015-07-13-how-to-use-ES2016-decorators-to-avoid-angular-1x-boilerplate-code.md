@@ -75,7 +75,7 @@ export default angular.module('app.account', [
     .controller('AccountController', AccountController);
 ```    
 
-The above *account.js* file contains a lot of Angular 1.x boilerplate code that I need to repeat over and over in other modules/components files and as we are using ECMAScript 2015 modules already it would be nice if we could somehow hide Angular 1.x modules and all these *.controller*, *.config*, *.directove* etc. syntax and the way how we can do that is using ES2016 decorators. If you want to know more about ES2016 decorators you can read [Addy Osmani](https://twitter.com/addyosmani) article [Exploring ES2016 Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841).	
+The above *account.js* file contains a lot of Angular 1.x boilerplate code that I need to repeat over and over in other modules/components files and as we are using ECMAScript 2015 modules already it would be nice if we could somehow hide Angular 1.x modules and all these *.controller*, *.config*, *.directive* etc. syntax and the way how we can do that is using ES2016 decorators. If you want to know more about ES2016 decorators you can read [Addy Osmani](https://twitter.com/addyosmani) article [Exploring ES2016 Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841).	
 
 ##Dependencies
 

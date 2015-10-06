@@ -211,7 +211,7 @@ gulp.task('bundle', 'Create JS production bundle', ['jshint'], function (cb) {
     const builder = new Builder();
     const inputPath = 'src/app/bootstrap';
     const outputFile = `${path.tmp.scripts}build.js`;
-    const outputOptions = { sourceMaps: true, config: {sourceRoot: path.tmp.scripts}, conditions: { 'ENV|mock': ENV.toLowerCase() === 'test', 'ENV|environment': ENV.toLowerCase()} };
+    const outputOptions = { sourceMaps: true, config: {sourceRoot: path.tmp.scripts} };
     
     builder.loadConfig(`${path.root}/jspm.conf.js`)
          .then(() => {

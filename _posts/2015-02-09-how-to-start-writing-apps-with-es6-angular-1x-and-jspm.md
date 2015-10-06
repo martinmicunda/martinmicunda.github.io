@@ -221,7 +221,6 @@ gulp.task('bundle', 'Create JS production bundle', ['jshint'], function (cb) {
          });
 });
 {% endhighlight %}
-> At the moment you have to add  traceur-runtime.js manually as there is open [issue](https://github.com/systemjs/builder/issues/46) against it.
 
 If you want to run my production code just run `npm start -- --env=PROD` that will create production code under `build/dist` directory and it will run code from this directory.
 

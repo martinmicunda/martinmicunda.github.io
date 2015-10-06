@@ -61,7 +61,7 @@ import './employee.mock.js#?~ENV|mock';
 
 In this case module is loaded because value `ENV.mock` is negated to `true`.
 
-There are not so many condition options that you can use but even with these few options I find SystemJS conditionals import feature really powerful in my projects.
+There are not so many condition options that you can use but even with these few options I find SystemJS conditional import feature really powerful in my projects.
 
 ##Real Use Case
 
@@ -151,7 +151,7 @@ import AbstractResource from '../abstract-resource';
 import {Service, Inject} from '../../../ng-decorators'; 
 ```
 
-All previous steps describe development workflow when you are developing your application but by in the end of day you want to create production code which mean create a bundle with SystemJS Builder. SFX bundles do support conditional builds but they work little a bit differently than conditions in development workflow. There is open ticket [#311](https://github.com/systemjs/builder/issues/311) to support multiple conditional variations. So for now you need to add conditions like is show in below gulp bundle task:
+All previous steps describe development workflow when you are developing your application but by at the end of day you want to create production code which mean create a bundle with SystemJS Builder. SFX bundles do support conditional builds but they work little a bit differently than conditions in development workflow. There is open ticket [#311](https://github.com/systemjs/builder/issues/311) to support multiple conditional variations. So for now you need to add conditions like is show in below gulp bundle task:
 
 ```js
 gulp.task('bundle', ['jshint'], (cb) => {
@@ -160,7 +160,7 @@ gulp.task('bundle', ['jshint'], (cb) => {
     const builder = new Builder();
     const inputPath = 'src/app/app';
     const outputFile = `${path.tmp.scripts}build.js`;
-    const outputOptions = { sourceMaps: true, config: {sourceRoot: path.tmp.scripts}, conditions: { 'ENV|mock': ENV.toLowerCase() === 'test', 'ENV|environment': ENV.toLowerCase()} };
+    const outputOptions = { conditions: { 'ENV|mock': ENV.toLowerCase() === 'test', 'ENV|environment': ENV.toLowerCase() }, sourceMaps: true, config: {sourceRoot: path.tmp.scripts} };
 
     builder.loadConfig(`${path.root}/jspm.conf.js`)
         .then(() => {
@@ -172,4 +172,4 @@ gulp.task('bundle', ['jshint'], (cb) => {
 ```
 
 ##Conclusion
-The real use case of SystemJS conditionals import can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. Keep in mind this feature is still in development and it might change in the future. Currently you probably won't find any documentation for conditionals import so I would suggest to look at SystemJS source code or SystemJS test cases.
+The real use case of SystemJS conditional import can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. Keep in mind this feature is still in development and it might change in the future. Currently you probably won't find any documentation for conditional import so I would suggest to look at [SystemJS source code](https://github.com/systemjs/systemjs/blob/master/lib%2Fconditionals.js) or [SystemJS test cases](https://github.com/systemjs/systemjs/blob/1cfd5fe623cd5df443667e57bf26148ee5647789/test%2Ftest.js).

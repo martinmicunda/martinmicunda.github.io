@@ -151,7 +151,7 @@ import AbstractResource from '../abstract-resource';
 import {Service, Inject} from '../../../ng-decorators'; 
 ```
 
-All previous steps describe development workflow when you are developing your application but by at the end of day you want to create production code which mean create a bundle with SystemJS Builder. SFX bundles do support conditional builds but they work little a bit differently than conditions in development workflow. There is open ticket [#311](https://github.com/systemjs/builder/issues/311) to support multiple conditional variations. So for now you need to add conditions like is show in below gulp bundle task:
+All previous steps describe development workflow when you are developing your application but at the end of day you want to create production code which mean create a bundle with SystemJS Builder. SFX bundles do support conditional builds but they work little a bit differently than conditions in development workflow. There is open ticket [#311](https://github.com/systemjs/builder/issues/311) to support multiple conditional variations. So for now you need to add conditions like is show in below gulp bundle task:
 
 ```js
 gulp.task('bundle', ['jshint'], (cb) => {

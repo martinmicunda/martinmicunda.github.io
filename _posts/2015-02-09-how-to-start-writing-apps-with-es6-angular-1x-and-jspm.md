@@ -36,6 +36,11 @@ Next when you open `package.json` you can see jspm block that configures  packag
     "dependencies": {
         "angular": "1.3.8",
         .....
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@5.8.24",
+      "babel-runtime": "npm:babel-runtime@5.8.24",
+      "core-js": "npm:core-js@1.1.4"
     }
 }
 {% endhighlight %}
@@ -43,20 +48,24 @@ Next when you open `package.json` you can see jspm block that configures  packag
 Next open `jspm.config.js` which tells SystemJS how to find modules (if you look closer you can see that configuration is similar like in require.js)
 {% highlight javascript %}
 System.config({
-  "baseURL": "./",
-  "paths": {
-    "*": "*.js",
-    "employee-scheduling-ui/*": "src/*.js",
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
-  }
-});
-
-System.config({
-  "map": {
-    "angular": "github:angular/bower-angular@1.3.8",
-	...
-  }
+    baseURL: "./",
+    defaultJSExtensions: true,
+    transpiler: "babel",
+    babelOptions: {
+      "optional": [
+        "runtime"
+      ],
+      "stage": 1
+    },
+    paths: {
+      "employee-scheduling-ui/*": "src/*.js",
+      "github:*": "jspm_packages/github/*",
+      "npm:*": "jspm_packages/npm/*"
+    },
+    "map": {
+      "angular": "github:angular/bower-angular@1.3.8",
+  	  ...
+    }
 });
 {% endhighlight %}
 
@@ -83,6 +92,7 @@ As I mentioned in previous section there is no build step required as all compil
 As we are using ES6 with Angular 1.x we can't use `ng-app` directive to bootstrap the application as modules are loaded asynchronously instead of that we need to bootstrap the application manually:
 
 {% highlight javascript %}
+import angular from 'angular';
 import mainModule from './main';
 
 angular.element(document).ready(function() {
@@ -197,23 +207,23 @@ If you run `employee-scheduling` app and open the browser console you can see th
 
 {% highlight javascript %}
 gulp.task('bundle', 'Create JS production bundle', ['jshint'], function (cb) {
-    var builder = require('systemjs-builder');
-
-    builder.loadConfig('./jspm.conf.js')
-        .then(function() {
-            builder.buildSFX('src/app/bootstrap', paths.tmp.scripts + 'build.js', { sourceMaps: true, config: {sourceRoot: paths.tmp.scripts} })
-                .then(function() {
-                    return cb();
-                })
-                .catch(function(ex) {
-                    cb(new Error(ex));
-                });
-        });
+    const Builder = require('systemjs-builder');
+    const builder = new Builder();
+    const inputPath = 'src/app/bootstrap';
+    const outputFile = `${path.tmp.scripts}build.js`;
+    const outputOptions = { sourceMaps: true, config: {sourceRoot: path.tmp.scripts}, conditions: { 'ENV|mock': ENV.toLowerCase() === 'test', 'ENV|environment': ENV.toLowerCase()} };
+    
+    builder.loadConfig(`${path.root}/jspm.conf.js`)
+         .then(() => {
+             builder.buildStatic(inputPath, outputFile, outputOptions)
+                 .then(() => cb())
+                 .catch((ex) => cb(new Error(ex)));
+         });
 });
 {% endhighlight %}
 > At the moment you have to add  traceur-runtime.js manually as there is open [issue](https://github.com/systemjs/builder/issues/46) against it.
 
-If you want to run my production code just run `gulp serve:dist` that will create production code under `build/dist` directory and it will run code from this directory.
+If you want to run my production code just run `npm start -- --env=PROD` that will create production code under `build/dist` directory and it will run code from this directory.
 
 ## Conclusion
 I think by now you have at least some idea how to start writing apps with ES6, JSPM and how you can start preparing for Angular 2 as it will be written in ES6.  I have still plan to continue on this app and add some tests and slowly migrate to Angular 2 in the future. You can find the complete app code here: [https://github.com/martinmicunda/employee-scheduling-ui](https://github.com/martinmicunda/employee-scheduling-ui)

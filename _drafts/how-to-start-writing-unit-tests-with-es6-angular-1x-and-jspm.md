@@ -14,7 +14,7 @@ author:
 
 For last couple of months I have been working on [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) application that is fully written in ES2015 and ES2016 with Angular 1.x (if you want to know more about how to write apps with ES2015, Angular 1.x and JSPM check my blog post [here](http://martinmicunda.com/2015/02/09/how-to-start-writing-apps-with-es6-angular-1x-and-jspm/)) and came to the point where I had to start writing some unit tests.
 
-Currently I am running over [**900 unit tests**](https://travis-ci.org/martinmicunda/employee-scheduling-ui#L1075) and in this post I gonna describe how I got running all these tests with ES2015, Angular 1.x, Karma, JSPM, Istanbul and Jasmine. 
+Currently I am running over [**900 unit tests**](https://travis-ci.org/martinmicunda/employee-scheduling-ui/builds/85759582#L1041) and in this post I gonna describe how I got running all these tests with ES2015, Angular 1.x, Karma, JSPM, Istanbul and Jasmine. 
 
 Writing unit tests with ES2015 is really easy and in some cases you don't depend on `angular-mocks` at all as you test only vanilla JavaScript code. To give you some example let's have look how we can test authentication service written in ES2015 and Angular 1.x:
 
@@ -43,9 +43,9 @@ class AuthenticationService {
 export default AuthenticationService;
 ```
 
-> **NOTE:** I am using `ES2016 decorators` in my code to avoid boilerplate code. If you want to know more about decorators read my blog post [`How to use ES2016 decorators to avoid Angular 1.x and ES2015 boilerplate code`](http://martinmicunda.com/2015/07/13/how-to-use-ES2016-decorators-to-avoid-angular-1x-boilerplate-code/).
+> **NOTE:** I am using `ES2016 decorators` in my code to avoid boilerplate code. If you want to know more about decorators read my blog post [How to use ES2016 decorators to avoid Angular 1.x and ES2015 boilerplate code](http://martinmicunda.com/2015/07/13/how-to-use-ES2016-decorators-to-avoid-angular-1x-boilerplate-code/).
 
-In below test I do not need to inject any dependencies with Angular and instead I take advantage of ES2015 modules also I do not use `$q` promise but ES2015 promise and then I resolve these promises with tiny library calling [`jasmine-async-sugar`](https://github.com/tomastrajan/jasmine-async-sugar) (we gonna talk about this library later on in this blog).
+In below test I do not need to inject any dependencies with Angular and instead I take advantage of ES2015 modules also I do not use `$q` promise but ES2015 promise and then I resolve these promises with tiny library calling [jasmine-async-sugar](https://github.com/tomastrajan/jasmine-async-sugar) (we gonna talk about this library later on in this blog).
 
 [*authentication.spec.js*](https://github.com/martinmicunda/employee-scheduling-ui/blob/master/src%2Fapp%2Fcore%2Fservices%2Fauthentication.spec.js)
 
@@ -236,5 +236,5 @@ This is an issue with Istanbul and source maps so to fix this problem we need us
 ```
 
 ##Conclusion
-When I started to write applications in ES2015 a couple months ago I wasn't really confident to go to production because I really struggled to get run the tests and coverage for these applications however as I got running over 900 tests in one of my project I can say that I am really confident to push this apps to production now. All code and test examples mentioned in this post with `karma.conf.js` file can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. 
+When I started to write applications in ES2015 a couple months ago I wasn't really confident to go to production because I really struggled to get run the tests and coverage for these applications however as I got running over [**900 unit tests**](https://travis-ci.org/martinmicunda/employee-scheduling-ui/builds/85759582#L1041)  in one of my project I can say that I am really confident to push this apps to production now. All code and test examples mentioned in this post with `karma.conf.js` file can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. 
 

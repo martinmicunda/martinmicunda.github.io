@@ -3,7 +3,7 @@ layout: post
 
 title: Conditional module loading with SystemJS
 
-excerpt: "Today I gonna describe `conditional module loading` feature that SystemJS added couple weeks ago."
+excerpt: "Conditional module loading is new feature added by SystemJS that helps you to load your ES2015 (ES6) modules depend on the conditions that you specify."
 
 author:
   name: Martin Micunda
@@ -11,7 +11,7 @@ author:
   bio: Full Stack Software Engineer
 ---
 
-Today I gonna describe `conditional module loading` feature that [SystemJS](https://github.com/systemjs/systemjs) added couple weeks ago.
+Today I gonna describe `conditional module loading` feature that [SystemJS](https://github.com/systemjs/systemjs) added couple weeks ago. This feature helps you to load your ES2015 (ES6) modules depend on the conditions that you specify.
 
 > Keep in mind this feature is still not stable but I am using it in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) application already without any problem. 
 
@@ -22,20 +22,28 @@ In my application I am using [ES6 modules](http://www.2ality.com/2014/09/es6-mod
 ![es6-conditional-folders](https://raw.githubusercontent.com/martinmicunda/martinmicunda.github.io/master/images/posts/es6-conditional-folders.png)
 
 ##Conditional Syntax
-SystemJS supports two conditional syntaxes `Extension Conditions` and `Boolean Conditions` at the time of writing this blog.
+SystemJS supports two conditional syntaxes `Extension Conditions` and `Boolean Conditions` at the time of writing this blog. Before I start describing these syntaxes let's assume I create global env variables that look like this:
+
+*env.conditions.js*
+
+```js
+export var mock = true;
+export var environment = 'prod';
+```
+
+and then I add this file to  `jspm.config.js` like this:
+
+```js
+System.config({
+  map: {
+    "ENV": "env.conditions.js"
+  }
+});  
+```
 
 ###Extension Conditions
 
-The extension conditions syntax allows a condition module to alter the resolution of an import so let's assume I create global env variable that looks like this:
-
-```js
-window.ENV = {
-    environment: 'test', 
-    mock: false
-};
-```
-
-then I can use this variable in my condition extension import:
+The extension conditions syntax allows a condition module to alter the resolution of an import so I can use variables from previous section in my condition extension import:
 
 ```js
 import './config.#{ENV|environment}.js';
@@ -43,7 +51,7 @@ import './config.#{ENV|environment}.js';
 and SystemJS will replace this variable with string value:
 
 ```js
-import './config.test.js';
+import './config.prod.js';
 ```
 
 ###Boolean Conditions
@@ -65,7 +73,7 @@ There are not so many condition options that you can use but even with these few
 
 ##Real Use Case
 
-I have described conditional syntax but let's have look on some real example and how to get these conditions running with SystemJS and SystemJS Builder in real project.
+I have described conditional syntax but let's have look on some real example and how to get these conditions running with `SystemJS` and `SystemJS Builder` in real project.
 
 In my projects I like to use `npm scripts` and hide all the logic there so when I want to run application I use follow commands:
 
@@ -78,32 +86,34 @@ npm start -- --env=PROD
 The command `npm start` start the application and `env` arguments are passed through CLI into `gulp` or other build tool of your choice. These `env` values are important because we need to get them to SystemJS so here is my development flow.
 
 ###1.
-I create gulp task to inject arguments passing through `cli` to file that we gonna create in second step. The reason why I inject these values instead manually add them is because these values are changing depends on arguments passing from `cli`.
+I create gulp task that inject arguments passing through `cli` into file that we gonna create in second step. The reason why I inject these values instead manually add them is because these values are changing depends on arguments passing from `cli`.
 
 ```js
 gulp.task('config', () => {
     return gulp.src(path.app.config.conditions)
         .pipe(inject(gulp.src('.'), {
-            starttag: '<!-- inject:env -->',
-            transform: () => `mock: ${ENV.toLowerCase() === 'test'}, environment: '${env.toLowerCase()}',`
+            starttag: '/* inject:env */',
+            endtag: '/* endinject */',
+            transform: () => `export var mock = ${ENV.toLowerCase() === 'test'};\nexport var environment = '${env.toLowerCase()}';`
         }))
         .pipe(gulp.dest(path.root));
 });
 ```
+
+> **NOTE:** It's up to you what approach you decide to use to dynamically inject env variables to  `env.conditions.js` file. In my projects I use [gulp-inject](https://www.npmjs.com/package/gulp-inject).
+
 ###2.
-I create `env.conditions.js` file in root directory where I inject all conditions via gulp task that we created in step 1 and register them with SystemJS.
+I create [`env.conditions.js`](https://github.com/martinmicunda/employee-scheduling-ui/blob/master/src%2Fapp%2Fcore%2Fconfig%2Fenv.conditions.js) file where I inject all conditions via gulp task that we created in step 1.
 
 ```js
 'use strict';
 
-window.ENV = {
-    <!-- inject:env -->
-    mock: false, environment: 'dev',
-    <!-- endinject -->
-};
-
-System.set('ENV', System.newModule({ 'default': window.ENV, __useDefault: true }));
+/* inject:env */
+export var mock = false;
+export var environment = 'prod';
+/* endinject */
 ```
+
 I also commit this file to git and then stop tracking changes in this file because you can chance environments quit often during development. 
 
 ```bash
@@ -115,16 +125,14 @@ git update-index --no-assume-unchanged env.conditions.js
 ```
 
 ###3.
+I add `env.conditions.js` file to [`jspm.config.js`](https://github.com/martinmicunda/employee-scheduling-ui/blob/master/jspm.conf.js) and register ENV module with SystemJS.
 
-Then I add required files to `index.html`. Keep in mind that order of these files is important.
-
-```html
-<script src="jspm_packages/system.js"></script>
-<script src="jspm.conf.js"></script>
-<script src="env.conditions.js"></script>
-<script>         
-System.import('app/app').catch(console.error.bind(console)); 
-</script>
+```js
+System.config({
+  map: {
+    "ENV": "src/app/core/config/env.conditions.js"
+  }
+});  
 ```
 
 ###4.
@@ -155,7 +163,6 @@ All previous steps describe development workflow when you are developing your ap
 
 ```js
 gulp.task('bundle', ['jshint'], (cb) => {
-    const ENV = !!util.env.env ? util.env.env : 'DEV';
     const Builder = require('systemjs-builder');
     const builder = new Builder();
     const inputPath = 'src/app/app';
@@ -172,4 +179,4 @@ gulp.task('bundle', ['jshint'], (cb) => {
 ```
 
 ##Conclusion
-The real use case of SystemJS conditional import can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. Keep in mind this feature is still in development and it might change in the future. Currently you probably won't find any documentation for conditional import so I would suggest to look at [SystemJS source code](https://github.com/systemjs/systemjs/blob/master/lib%2Fconditionals.js) or [SystemJS test cases](https://github.com/systemjs/systemjs/blob/1cfd5fe623cd5df443667e57bf26148ee5647789/test%2Ftest.js).
+The real use case of SystemJS conditional import can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. Keep in mind this feature is still in development and it might change in the future. Currently you probably won't find any documentation for conditional import so I would suggest to look at [SystemJS source code](https://github.com/systemjs/systemjs/blob/master/lib%2Fconditionals.js) or [SystemJS test cases](https://github.com/systemjs/systemjs/blob/1cfd5fe623cd5df443667e57bf26148ee5647789/test%2Ftest.js) for more examples. 

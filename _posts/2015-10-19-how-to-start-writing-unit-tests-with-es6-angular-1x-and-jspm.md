@@ -4,7 +4,7 @@ layout: post
 title: How to start writing unit tests with ES6, Angular 1.x and JSPM
 subtitle: "ES6 unit tests workflow with Karma, JSPM, Istanbul and Jasmine"
 
-excerpt: "For last couple of months I have been working on Employee Scheduling application that is fully written in ES2015 and ES2016 with Angular 1.x and came to the point where I had to start writing some unit tests. Currently I am running over 900 unit tests and in this post I gonna describe how I got running all these tests with ES2015, Angular 1.x and JSPM."
+excerpt: "For last couple of months I have been working on Employee Scheduling application that is fully written in ES2015 and ES2016 with Angular 1.x and came to the point where I had to start writing some unit tests. Currently I am running over 900 unit tests and in this post I gonna describe how I got running all these tests with ES2015, Angular 1.x, Karma, JSPM, Istanbul and Jasmine."
 
 author:
   name: Martin Micunda
@@ -16,7 +16,7 @@ For last couple of months I have been working on [Employee Scheduling](https://g
 
 Currently I am running over [**900 unit tests**](https://travis-ci.org/martinmicunda/employee-scheduling-ui/builds/85759582#L1041) and in this post I gonna describe how I got running all these tests with ES2015, Angular 1.x, Karma, JSPM, Istanbul and Jasmine. 
 
-Writing unit tests with ES2015 is really easy and in some cases you don't depend on `angular-mocks` at all as you test only vanilla JavaScript code. To give you some example let's have look how we can test authentication service written in ES2015 and Angular 1.x:
+Writing unit tests with ES2015 is really easy and in some cases you don't depend on `angular-mocks` at all as you only test vanilla JavaScript code. To give you some example let's have look how we can test authentication service written in ES2015 and Angular 1.x:
 
 [*authentication.js*](https://github.com/martinmicunda/employee-scheduling-ui/blob/master/src%2Fapp%2Fcore%2Fservices%2Fauthentication.js)
 
@@ -45,7 +45,7 @@ export default AuthenticationService;
 
 > **NOTE:** I am using `ES2016 decorators` in my code to avoid boilerplate code. If you want to know more about decorators read my blog post [How to use ES2016 decorators to avoid Angular 1.x and ES2015 boilerplate code](http://martinmicunda.com/2015/07/13/how-to-use-ES2016-decorators-to-avoid-angular-1x-boilerplate-code/).
 
-In below test I do not need to inject any dependencies with Angular and instead I take advantage of ES2015 modules also I do not use `$q` promise but ES2015 promise and then I resolve these promises with tiny library calling [jasmine-async-sugar](https://github.com/tomastrajan/jasmine-async-sugar) (we gonna talk about this library later on in this blog).
+In below test I do not need to inject any dependencies with Angular and instead I take advantage of ES2015 modules also I do not use `$q` promise instead I am using [ES2015 promise](http://www.2ality.com/2014/10/es6-promises-api.html) and then I resolve these promises with tiny library called [jasmine-async-sugar](https://github.com/tomastrajan/jasmine-async-sugar) (we gonna talk about this library later on in this blog).
 
 [*authentication.spec.js*](https://github.com/martinmicunda/employee-scheduling-ui/blob/master/src%2Fapp%2Fcore%2Fservices%2Fauthentication.spec.js)
 
@@ -82,7 +82,7 @@ As I mentioned early I have written over `900` unit tests so if you want to see 
 
 ##Setting up Karma with JSPM
 
-To get running unit test with ES2015 we need to install extra libraries so let's install follow packages:
+To get running unit tests written in ES2015 we need to install extra libraries so let's install follow packages:
 
 ```bash
 npm install --save-dev jasmine-core phantomjs karma karma-jasmine karma-phantomjs-launcher karma-jspm jasmine-async-sugar
@@ -104,7 +104,7 @@ module.exports = function (config) {
 ```
 
 ###2.
-We use PhantomJS as our headless test browser so we need to add polyfill to fix [issue](https://github.com/ariya/phantomjs/issues/10522) with `Function.bind()` that is not supported by PhantomJS 1.x. The `bind()` function is use by SystemJS and it also might be use in other libraries so is good idea to include this polyfill with PhantomJS 1.x.
+We use PhantomJS as our headless test browser so we need to add polyfill to fix [issue](https://github.com/ariya/phantomjs/issues/10522) with `Function.bind()` that is not supported by PhantomJS 1.x. The `bind()` function is use by SystemJS and it might be use in other libraries so it is good idea to include this polyfill with PhantomJS 1.x.
 
 I also like to use tiny [`jasmine-async-sugar`](https://github.com/tomastrajan/jasmine-async-sugar) library that enhance testing of async (promise) functionality in Angular 1.X applications. To give you quick taste have look on the follow code:
 
@@ -209,11 +209,12 @@ After you run tests the coverage reports can be found in the `test-reports/cover
 
 ![es6-coverage](https://raw.githubusercontent.com/martinmicunda/martinmicunda.github.io/master/images/posts/coverage.png)
 
+![es6-coverage-code](https://raw.githubusercontent.com/martinmicunda/martinmicunda.github.io/master/images/posts/coverage-code.png)
 
 At the time of writing this blog there are a few issues with ES2015 coverage so let's have look on these issues and how to fix them.
 
 ### Issue 1
-The current `karma-coverage` is only showing ES5 code and not ES2015 as you would expect so to fix this problem we need to use a fork version that was created by Douglas Duteil. 
+The current `karma-coverage` is only showing ES5 code and not ES2015 as you would expect so to fix this problem we need to use a fork version that was created by [Douglas Duteil](https://github.com/douglasduteil). 
 
 ```
 "karma-coverage": "douglasduteil/karma-coverage#next"
@@ -236,5 +237,4 @@ This is an issue with Istanbul and source maps so to fix this problem we need us
 ```
 
 ##Conclusion
-When I started to write applications in ES2015 a couple months ago I wasn't really confident to go to production because I really struggled to get run the tests and coverage for these applications however as I got running over [**900 unit tests**](https://travis-ci.org/martinmicunda/employee-scheduling-ui/builds/85759582#L1041)  in one of my project I can say that I am really confident to push this apps to production now. All code and test examples mentioned in this post with `karma.conf.js` file can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. 
-
+When I started to write applications in ES2015 a couple months ago I wasn't really confident to go to production because I really struggled to get run the tests and coverage for these applications however as I got running over [**900 unit tests**](https://travis-ci.org/martinmicunda/employee-scheduling-ui/builds/85759582#L1041)  in one of my project I can say that I am really confident to push these applications to production now. All code and test examples mentioned in this post with `karma.conf.js` file can be found in my [Employee Scheduling](https://github.com/martinmicunda/employee-scheduling-ui) project. 

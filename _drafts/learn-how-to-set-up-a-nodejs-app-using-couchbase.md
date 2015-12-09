@@ -1,7 +1,8 @@
 ---
 layout: post
 
-title: Learn how to set up a NodeJS app using Couchbase Server, KoaJS, ES6/ES7 and N1QL
+title: Learn how to set up a NodeJS app using Couchbase Server, KoaJS and ES6/ES7
+subtitle: "Prepare the development environment with Vagrant, Docker and Ansible"
 
 excerpt: ""
 

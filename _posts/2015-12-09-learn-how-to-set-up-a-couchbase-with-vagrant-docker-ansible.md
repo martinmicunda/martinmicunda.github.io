@@ -17,7 +17,7 @@ For last couple of months I have been working on `Employee Scheduling` applicati
 In this post we look how to setup `Couchbase Server` with `Vagrant`, `Docker` and `Ansible` which let us reuse this dev environment for similar projects in the future or if you are working in the team and new person join the project it's really easy to setup dev environment for this person. 
 
  - **Learn how to set up a Couchbase Server with Vagrant, Docker and Ansible**
- - Learn how to configure a Couchbase Server with NodeJS and ES6/ES7
+ - [Learn how to configure a Couchbase Server with NodeJS and ES6/ES7](http://martinmicunda.com/2016/01/12/learn-how-to-configure-a-couchbase-server-with-nodejs)
  - Learn how to set up a NodeJS app using Couchbase Server, KoaJS and ES6/ES7
  - Learn how to do CRUD operations with Couchbase Server, NodeJS, ES6/ES7 and N1QL 
  - Learn how to do advanced CRUD operations with Couchbase Server, NodeJS, ES6/ES7 and N1QL 

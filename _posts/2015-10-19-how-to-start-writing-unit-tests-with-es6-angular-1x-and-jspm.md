@@ -53,6 +53,7 @@ In below test I do not need to inject any dependencies with Angular and instead 
 'use strict';
 
 import TokenModel from '../models/token.js';
+import AuthenticationResource from '../resources/authentication/authentication.js';
 import AuthenticationService from './authentication.js';
 
 describe('AuthenticationService', () => {
